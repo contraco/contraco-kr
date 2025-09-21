@@ -1,87 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://contraco.kr/about.html</loc>
-    <lastmod>2025-09-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://contraco.kr/ai-strategy-framework.html</loc>
-    <lastmod>2025-09-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://contraco.kr/contact.html</loc>
-    <lastmod>2025-09-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://contraco.kr/cultural-guide.html</loc>
-    <lastmod>2025-09-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://contraco.kr/digital-transformation-roi.html</loc>
-    <lastmod>2025-09-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://contraco.kr</loc>
-    <lastmod>2025-09-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://contraco.kr/insights.html</loc>
-    <lastmod>2025-09-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://contraco.kr/ko-ai-adoption-research.html</loc>
-    <lastmod>2025-09-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://contraco.kr/leading-ai-transformation.html</loc>
-    <lastmod>2025-09-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://contraco.kr/organizational-design-ai.html</loc>
-    <lastmod>2025-09-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://contraco.kr/pricing-psychology.html</loc>
-    <lastmod>2025-09-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://contraco.kr/resonance-method.html</loc>
-    <lastmod>2025-09-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://contraco.kr/strategic-intelligence.html</loc>
-    <lastmod>2025-09-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://contraco.kr/thankyou.html</loc>
-    <lastmod>2025-09-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://contraco.co.kr/</loc>
+  <lastmod>2025-09-21T19:36:13+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://contraco.co.kr/insights.html</loc>
+  <lastmod>2025-09-21T19:36:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://contraco.co.kr/about.html</loc>
+  <lastmod>2025-09-21T19:36:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://contraco.co.kr/resonance-method.html</loc>
+  <lastmod>2025-09-21T19:36:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://contraco.co.kr/ai-strategy-framework.html</loc>
+  <lastmod>2025-09-21T19:36:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://contraco.co.kr/digital-transformation-roi.html</loc>
+  <lastmod>2025-09-21T19:36:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://contraco.co.kr/organizational-design-ai.html</loc>
+  <lastmod>2025-09-21T19:36:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://contraco.co.kr/leading-ai-transformation.html</loc>
+  <lastmod>2025-09-21T19:36:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
 </urlset>
