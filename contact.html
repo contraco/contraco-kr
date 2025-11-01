@@ -11,13 +11,6 @@
     <!-- Robots Meta Tag - noindex for contact page -->
     <meta name="robots" content="noindex, follow">
     
-    <!-- Complete hreflang for International SEO -->
-    <link rel="alternate" href="https://contraco.net/contact.html" hreflang="x-default" />
-    <link rel="alternate" href="https://contraco.net/contact.html" hreflang="en" />
-    <link rel="alternate" href="https://contraco.de/contact.html" hreflang="de" />
-    <link rel="alternate" href="https://contraco.ru/contact.html" hreflang="ru" />
-    <link rel="alternate" href="https://contraco.co.kr/contact.html" hreflang="ko" />
-    
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-868WGCC45D"></script>
     <script>
@@ -29,6 +22,13 @@
             page_location: window.location.href
         });
     </script>
+    
+    <!-- Complete hreflang for International SEO -->
+    <link rel="alternate" href="https://contraco.net/contact.html" hreflang="x-default" />
+    <link rel="alternate" href="https://contraco.net/contact.html" hreflang="en" />
+    <link rel="alternate" href="https://contraco.de/contact.html" hreflang="de" />
+    <link rel="alternate" href="https://contraco.ru/contact.html" hreflang="ru" />
+    <link rel="alternate" href="https://contraco.co.kr/contact.html" hreflang="ko" />
     
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -86,20 +86,36 @@
     </script>
     
     <style>
+        /* CSS Variables - Standard across all contraco pages */
         :root {
-            --primary-red: #E62D00;
-            --deep-charcoal: #2B2B2B;
-            --warm-gray-dark: #4A4A4A;
-            --warm-gray-medium: #6B6B6B;
-            --warm-gray-light: #E8E8E8;
-            --warm-white: #FAFAFA;
-            --font-serif: 'Crimson Text', serif;
-            --font-sans: 'Inter', sans-serif;
-            --shadow-small: 0 2px 8px rgba(0, 0, 0, 0.1);
-            --shadow-medium: 0 4px 16px rgba(0, 0, 0, 0.15);
-            --shadow-hover: 0 8px 32px rgba(0, 0, 0, 0.2);
+            /* Brand Colors */
+            --primary-red: #e62d00;
+            --deep-charcoal: #2C2C2C;
+            --warm-white: #F8F6F3;
+            --warm-gray-light: #E5E2DD;
+            --warm-gray-medium: #A8A5A0;
+            --warm-gray-dark: #6B6B6B;
+            
+            /* Typography */
+            --font-serif: 'Crimson Text', Georgia, 'Times New Roman', serif;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            
+            /* Layout */
+            --container-max: 1200px;
+            --section-padding: 100px 0;
+            
+            /* Transitions */
+            --transition-fast: 0.3s ease;
+            --transition-medium: 0.5s ease;
+            
+            /* Shadows */
+            --shadow-small: 0 4px 15px rgba(0, 0, 0, 0.05);
+            --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.08);
+            --shadow-large: 0 15px 50px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 20px 60px rgba(0, 0, 0, 0.15);
         }
 
+        /* Reset and Base Styles */
         * {
             margin: 0;
             padding: 0;
@@ -110,64 +126,120 @@
             font-family: var(--font-sans);
             line-height: 1.6;
             color: var(--deep-charcoal);
-            background: var(--warm-white);
+            background-color: var(--warm-white);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: var(--container-max);
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 40px;
         }
 
-        /* Header */
-        .header {
-            background: white;
-            padding: 20px 0;
-            box-shadow: var(--shadow-small);
-            position: sticky;
+        /* Navigation */
+        .navbar {
+            position: fixed;
             top: 0;
-            z-index: 100;
+            width: 100%;
+            background: rgba(248, 246, 243, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 12px 0;
+            transition: all 0.3s ease;
         }
 
-        .header-content {
+        .nav-container {
+            position: relative;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 40px;
         }
 
         .logo {
+            margin-left: 60px;
             display: flex;
             align-items: center;
-            gap: 12px;
             text-decoration: none;
-            color: var(--deep-charcoal);
         }
 
-        .logo-text {
-            font-family: var(--font-serif);
+        .logo img {
+            height: 36px;
+            width: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Logo Fallback Styling */
+        .logo-fallback {
             font-size: 1.8rem;
-            font-weight: 600;
+            font-weight: 700;
+            color: var(--primary-red);
+            letter-spacing: -0.02em;
+            font-family: var(--font-serif);
+            transition: all 0.3s ease;
+            display: none;
+        }
+
+        .logo:hover .logo-fallback {
+            transform: scale(1.05);
+        }
+
+        .logo.logo-failed img {
+            display: none;
+        }
+
+        .logo.logo-failed .logo-fallback {
+            display: block;
         }
 
         .nav-menu {
+            margin-right: 60px;
             display: flex;
             list-style: none;
-            gap: 32px;
-            align-items: center;
+            gap: 35px;
         }
 
         .nav-link {
             text-decoration: none;
-            color: var(--warm-gray-dark);
+            color: var(--deep-charcoal);
             font-weight: 500;
+            font-size: 0.95rem;
             transition: color 0.3s ease;
+            position: relative;
         }
 
-        .nav-link:hover,
+        .nav-link:hover {
+            color: var(--primary-red);
+        }
+
         .nav-link.active {
             color: var(--primary-red);
         }
 
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary-red);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        /* Language Switcher */
         .language-switcher {
             display: flex;
             gap: 8px;
@@ -175,110 +247,123 @@
         }
 
         .lang-link {
-            padding: 6px 10px;
             text-decoration: none;
             color: var(--warm-gray-medium);
-            font-size: 0.9rem;
+            font-weight: 500;
+            font-size: 0.85rem;
+            padding: 4px 8px;
             border-radius: 4px;
             transition: all 0.3s ease;
         }
 
         .lang-link:hover {
-            background: var(--warm-gray-light);
-            color: var(--deep-charcoal);
+            color: var(--primary-red);
+            background-color: rgba(230, 45, 0, 0.1);
         }
 
         .lang-link.active {
-            background: var(--primary-red);
             color: white;
+            background-color: var(--primary-red);
+            font-weight: 600;
         }
 
-        /* Main Contact Section */
+        /* Main Content */
+        .main-content {
+            padding-top: 80px;
+        }
+
+        /* Contact Section */
         .contact-page {
-            padding: 80px 0;
-            background: var(--warm-white);
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--warm-white) 0%, var(--warm-gray-light) 100%);
         }
 
         .contact-title {
             font-family: var(--font-serif);
-            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-size: clamp(3rem, 6vw, 4.5rem);
+            font-weight: 600;
             text-align: center;
             margin-bottom: 30px;
             color: var(--deep-charcoal);
         }
 
         .contact-subtitle {
-            font-size: 1.2rem;
-            text-align: center;
+            font-size: 1.3rem;
             color: var(--warm-gray-dark);
-            max-width: 700px;
+            text-align: center;
+            max-width: 600px;
             margin: 0 auto 60px;
+            line-height: 1.6;
         }
 
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: start;
-        }
-
-        .contact-info {
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: var(--shadow-small);
+            gap: 80px;
+            margin-top: 60px;
         }
 
         .contact-info h3 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 40px;
+            color: var(--deep-charcoal);
             font-family: var(--font-serif);
-            font-size: 1.8rem;
-            color: var(--primary-red);
-            margin-bottom: 30px;
         }
 
         .contact-item {
-            margin-bottom: 25px;
-            padding-bottom: 25px;
-            border-bottom: 1px solid var(--warm-gray-light);
+            margin-bottom: 30px;
+            padding: 25px;
+            background: white;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-red);
+            box-shadow: var(--shadow-small);
+            transition: all 0.3s ease;
         }
 
-        .contact-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
+        .contact-item:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
         }
 
         .contact-label {
             font-weight: 600;
-            color: var(--deep-charcoal);
-            margin-bottom: 5px;
+            color: var(--primary-red);
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .contact-value {
-            color: var(--warm-gray-dark);
+            color: var(--deep-charcoal);
+            font-size: 1rem;
+            line-height: 1.6;
         }
 
         .contact-value a {
-            color: var(--primary-red);
+            color: var(--deep-charcoal);
             text-decoration: none;
+            transition: color 0.3s ease;
         }
 
         .contact-value a:hover {
-            text-decoration: underline;
+            color: var(--primary-red);
         }
 
         .contact-form {
             background: white;
             padding: 40px;
             border-radius: 12px;
-            box-shadow: var(--shadow-small);
+            box-shadow: var(--shadow-medium);
         }
 
         .form-title {
-            font-family: var(--font-serif);
-            font-size: 1.8rem;
-            color: var(--deep-charcoal);
+            font-size: 2rem;
+            font-weight: 600;
             margin-bottom: 30px;
+            color: var(--deep-charcoal);
+            font-family: var(--font-serif);
         }
 
         .form-group {
@@ -287,44 +372,48 @@
 
         .form-label {
             display: block;
-            font-weight: 600;
-            color: var(--deep-charcoal);
             margin-bottom: 8px;
+            color: var(--deep-charcoal);
+            font-weight: 500;
+            font-size: 0.95rem;
         }
 
         .form-input,
         .form-textarea {
             width: 100%;
-            padding: 12px 16px;
+            padding: 14px 16px;
             border: 2px solid var(--warm-gray-light);
             border-radius: 6px;
             font-size: 15px;
             font-family: var(--font-sans);
-            transition: border-color 0.3s ease;
+            transition: all 0.3s ease;
+            background-color: var(--warm-white);
         }
 
         .form-input:focus,
         .form-textarea:focus {
             outline: none;
             border-color: var(--primary-red);
+            background-color: white;
         }
 
         .form-textarea {
-            min-height: 120px;
             resize: vertical;
+            min-height: 120px;
         }
 
         .form-button {
             background: var(--primary-red);
             color: white;
             border: none;
-            padding: 14px 32px;
+            padding: 16px 32px;
             border-radius: 6px;
-            font-size: 16px;
             font-weight: 600;
+            font-size: 1rem;
             cursor: pointer;
             transition: all 0.3s ease;
             width: 100%;
+            font-family: var(--font-sans);
         }
 
         .form-button:hover {
@@ -335,29 +424,31 @@
 
         /* Footer */
         .footer {
-            background: var(--deep-charcoal);
+            background: #1a1a1a;
             color: var(--warm-gray-light);
-            padding: 60px 0 30px;
+            padding: 50px 0 35px;
         }
 
         .footer-content {
             display: grid;
             grid-template-columns: 2fr 1fr;
-            gap: 60px;
-            margin-bottom: 40px;
+            gap: 50px;
+            align-items: start;
+            margin-bottom: 32px;
         }
 
         .footer-links {
             display: flex;
-            gap: 24px;
-            margin-bottom: 20px;
+            gap: 25px;
             flex-wrap: wrap;
+            margin-bottom: 16px;
         }
 
         .footer-links a {
             color: var(--warm-gray-light);
             text-decoration: none;
             transition: color 0.3s ease;
+            font-size: 0.95rem;
         }
 
         .footer-links a:hover {
@@ -366,44 +457,78 @@
 
         .company-info h4 {
             color: var(--primary-red);
+            font-size: 1.1rem;
             margin-bottom: 16px;
-            font-size: 1.2rem;
+            font-family: var(--font-serif);
         }
 
         .company-info p {
-            margin-bottom: 12px;
-            color: var(--warm-gray-light);
+            margin-bottom: 8px;
+            line-height: 1.6;
             font-size: 0.95rem;
+        }
+
+        .company-info strong {
+            color: var(--warm-gray-light);
         }
 
         .imprint-section h4 {
             color: var(--primary-red);
-            margin-bottom: 16px;
-            font-size: 1.2rem;
+            font-size: 1rem;
+            margin-bottom: 12px;
+            font-family: var(--font-serif);
+        }
+
+        .imprint-details {
+            font-size: 0.85rem;
+            line-height: 1.5;
         }
 
         .imprint-details p {
-            margin-bottom: 8px;
+            margin-bottom: 6px;
+        }
+
+        .imprint-details strong {
             color: var(--warm-gray-light);
-            font-size: 0.9rem;
         }
 
         .footer-bottom {
-            text-align: center;
-            padding-top: 30px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 25px;
+            text-align: center;
+            font-size: 0.85rem;
         }
 
-        .footer-bottom p {
-            color: var(--warm-gray-medium);
-            font-size: 0.9rem;
+        .trademark-notice {
+            margin-top: 8px;
+            font-size: 0.8rem;
+            opacity: 0.8;
         }
 
         /* Responsive Design */
+        @media (max-width: 1024px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+        }
+
         @media (max-width: 768px) {
+            .container,
+            .nav-container {
+                padding: 0 20px;
+            }
+
+            .logo {
+                margin-left: 20px;
+            }
+
             .nav-menu {
-                flex-direction: column;
-                gap: 20px;
+                display: none;
+            }
+
+            .contact-title {
+                font-size: 2.5rem;
             }
 
             .contact-grid {
@@ -411,47 +536,67 @@
                 gap: 40px;
             }
 
+            .contact-form {
+                padding: 30px 25px;
+            }
+
             .footer-content {
                 grid-template-columns: 1fr;
-                gap: 40px;
+                gap: 30px;
+                text-align: center;
             }
 
             .footer-links {
                 justify-content: center;
             }
         }
+
+        @media (max-width: 480px) {
+            .contact-title {
+                font-size: 2rem;
+            }
+
+            .contact-form {
+                padding: 25px 20px;
+            }
+
+            .contact-item {
+                padding: 20px;
+            }
+        }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <a href="https://contraco.co.kr/" class="logo">
-                    <div class="logo-text">contraco</div>
-                </a>
-                <nav>
-                    <ul class="nav-menu">
-                        <li><a href="https://contraco.co.kr/" class="nav-link">집</a></li>
-                        <li><a href="https://contraco.co.kr/#services" class="nav-link">서비스</a></li>
-                        <li><a href="https://contraco.co.kr/#methodology" class="nav-link">방법론</a></li>
-                        <li><a href="https://contraco.co.kr/insights.html" class="nav-link">Insights</a></li>
-                        <li><a href="https://contraco.co.kr/about.html" class="nav-link">에 대한</a></li>
-                        <li><a href="https://contraco.co.kr/contact.html" class="nav-link active">연락하다</a></li>
-                        <li class="language-switcher">
-                            <a href="https://contraco.net/contact.html" class="lang-link">EN</a>
-                            <a href="https://contraco.de/contact.html" class="lang-link">DE</a>
-                            <a href="https://contraco.ru/contact.html" class="lang-link">RU</a>
-                            <a href="https://contraco.co.kr/contact.html" class="lang-link active">KO</a>
-                        </li>
-                    </ul>
-                </nav>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="https://contraco.co.kr/" class="logo" id="site-logo">
+                <img src="https://contraco.net/Logo_rectangle.svg" 
+                     alt="contraco" 
+                     onerror="this.parentElement.classList.add('logo-failed');">
+                <span class="logo-fallback">contraco</span>
+            </a>
+            <div style="display: flex; align-items: center;">
+                <ul class="nav-menu">
+                    <li><a href="https://contraco.co.kr/" class="nav-link">집</a></li>
+                    <li><a href="https://contraco.co.kr/#services" class="nav-link">서비스</a></li>
+                    <li><a href="https://contraco.co.kr/#methodology" class="nav-link">방법론</a></li>
+                    <li><a href="https://contraco.co.kr/insights.html" class="nav-link">Insights</a></li>
+                    <li><a href="https://contraco.co.kr/about.html" class="nav-link">에 대한</a></li>
+                    <li><a href="https://contraco.co.kr/contact.html" class="nav-link active">연락하다</a></li>
+                </ul>
+                <div class="language-switcher">
+                    <a href="https://contraco.net/contact.html" class="lang-link">EN</a>
+                    <a href="https://contraco.de/contact.html" class="lang-link">DE</a>
+                    <a href="https://contraco.ru/contact.html" class="lang-link">RU</a>
+                    <a href="https://contraco.co.kr/contact.html" class="lang-link active">KO</a>
+                </div>
             </div>
         </div>
-    </header>
+    </nav>
 
     <!-- Main Content -->
-    <main>
+    <main class="main-content">
         <section class="contact-page">
             <div class="container">
                 <h1 class="contact-title">변화에 대해 논의해 보겠습니다</h1>
@@ -502,7 +647,17 @@
 
                     <div class="contact-form">
                         <h3 class="form-title">상담 요청</h3>
-                        <form action="https://contraco.co.kr/thank-you.html" method="POST">
+                        <form action="https://formsubmit.co/transformation@contraco.net" method="POST">
+                            <!-- FormSubmit configuration -->
+                            <input type="hidden" name="_subject" value="새로운 변환 컨설팅 요청">
+                            <input type="hidden" name="_captcha" value="true">
+                            <input type="hidden" name="_template" value="table">
+                            <input type="hidden" name="_next" value="https://contraco.co.kr/thankyou.html">
+                            
+                            <!-- Better spam protection -->
+                            <input type="text" name="_honey" style="display:none" tabindex="-1">
+                            <input type="hidden" name="_autoresponse" value="contraco에 연락해 주셔서 감사합니다. 귀하의 메시지를 검토하고 24시간 이내에 응답하겠습니다.">
+                            
                             <div class="form-group">
                                 <label for="name" class="form-label">이름 *</label>
                                 <input type="text" id="name" name="name" class="form-input" required>
@@ -551,7 +706,7 @@
                         <a href="https://contraco.co.kr/insights.html">Insights</a>
                         <a href="https://contraco.co.kr/contact.html">연락하다</a>
                     </div>
-                    <h4>contraco USA</h4>
+                    <h4>contraco 미국</h4>
                     <p>전략적 명확성, 기술 지능, 심리적 깊이를 결합한 프리미엄 변화 컨설팅.</p>
                     <p><strong>이메일:</strong> transformation@contraco.net</p>
                     <p><strong>전화:</strong> +1 (312) 940-0326</p>
@@ -568,8 +723,69 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 contraco. 모든 권리 보유.</p>
+                <p class="trademark-notice">공명 방법™은 contraco의 등록 상표입니다.</p>
             </div>
         </div>
     </footer>
+
+    <script>
+        // Enhanced logo fallback with retry mechanism
+        (function() {
+            const logo = document.getElementById('site-logo');
+            const logoImg = logo.querySelector('img');
+            let retryCount = 0;
+            const maxRetries = 2;
+            
+            function handleLogoError() {
+                if (retryCount < maxRetries) {
+                    retryCount++;
+                    setTimeout(() => {
+                        logoImg.src = 'https://contraco.net/Logo_rectangle.svg';
+                    }, 1000 * retryCount);
+                } else {
+                    logo.classList.add('logo-failed');
+                }
+            }
+            
+            if (logoImg.complete && logoImg.naturalHeight === 0) {
+                handleLogoError();
+            }
+            
+            logoImg.addEventListener('error', handleLogoError);
+            
+            logoImg.addEventListener('load', function() {
+                logo.classList.remove('logo-failed');
+            });
+        })();
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(248, 246, 243, 0.98)';
+                navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                navbar.style.background = 'rgba(248, 246, 243, 0.95)';
+                navbar.style.boxShadow = 'none';
+            }
+        });
+
+        // Analytics tracking
+        if (typeof gtag !== 'undefined') {
+            // Track form submissions
+            document.querySelector('form').addEventListener('submit', function() {
+                gtag('event', 'form_submission', {
+                    event_category: 'engagement',
+                    event_label: 'contact_form_submit'
+                });
+            });
+
+            // Track page view
+            gtag('event', 'page_view', {
+                page_title: 'Contact - contraco.co.kr',
+                page_location: window.location.href
+            });
+        }
+    </script>
 </body>
 </html>

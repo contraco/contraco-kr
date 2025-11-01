@@ -89,6 +89,9 @@
             --font-serif: 'Crimson Text', Georgia, 'Times New Roman', serif;
             --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             --container-max: 1200px;
+            --shadow-small: 0 4px 15px rgba(0, 0, 0, 0.05);
+            --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 20px 60px rgba(0, 0, 0, 0.15);
         }
 
         * {
@@ -189,6 +192,10 @@
             color: var(--primary-red);
         }
 
+        .nav-link.active {
+            color: var(--primary-red);
+        }
+
         .nav-link::after {
             content: '';
             position: absolute;
@@ -200,71 +207,84 @@
             transition: width 0.3s ease;
         }
 
-        .nav-link:hover::after {
+        .nav-link:hover::after,
+        .nav-link.active::after {
             width: 100%;
         }
 
-        /* Main Content */
+        /* Language Switcher */
+        .language-switcher {
+            display: flex;
+            gap: 8px;
+            margin-left: 20px;
+        }
+
+        .lang-link {
+            text-decoration: none;
+            color: var(--warm-gray-medium);
+            font-weight: 500;
+            font-size: 0.85rem;
+            padding: 4px 8px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .lang-link:hover {
+            color: var(--primary-red);
+            background-color: rgba(230, 45, 0, 0.1);
+        }
+
+        .lang-link.active {
+            color: white;
+            background-color: var(--primary-red);
+            font-weight: 600;
+        }
+
         .main-content {
-            padding-top: 100px;
+            padding-top: 80px;
         }
 
-        /* Page Header */
         .page-header {
+            padding: 100px 0;
             background: linear-gradient(135deg, var(--warm-white) 0%, var(--warm-gray-light) 100%);
-            padding: 80px 0;
             text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .page-header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: -50%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, transparent, rgba(230, 45, 0, 0.02));
-            transform: rotate(-5deg);
         }
 
         .page-title {
             font-family: var(--font-serif);
-            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-size: clamp(3rem, 6vw, 4.5rem);
             font-weight: 600;
-            margin-bottom: 20px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .page-subtitle {
-            font-size: 1.2rem;
-            color: var(--warm-gray-dark);
-            max-width: 600px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
-        }
-
-        /* About Sections */
-        .about-section {
-            padding: 80px 0;
-        }
-
-        .about-section:nth-child(even) {
-            background: white;
-        }
-
-        .section-title {
-            font-size: 2.4rem;
-            font-weight: 700;
             margin-bottom: 30px;
             color: var(--deep-charcoal);
         }
 
         .highlight {
             color: var(--primary-red);
+        }
+
+        .page-subtitle {
+            font-size: 1.3rem;
+            color: var(--warm-gray-dark);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .about-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .about-section:nth-child(even) {
+            background: var(--warm-white);
+        }
+
+        .section-title {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 40px;
+            color: var(--deep-charcoal);
         }
 
         .about-content {
@@ -274,14 +294,11 @@
             align-items: start;
         }
 
-        .about-text {
+        .about-text p {
+            margin-bottom: 20px;
             font-size: 1.1rem;
             line-height: 1.7;
             color: var(--warm-gray-dark);
-        }
-
-        .about-text p {
-            margin-bottom: 24px;
         }
 
         .stats-grid {
@@ -291,75 +308,87 @@
         }
 
         .stat-card {
-            background: var(--warm-white);
-            padding: 30px;
+            background: white;
+            padding: 30px 25px;
             border-radius: 12px;
             text-align: center;
             border-left: 4px solid var(--primary-red);
+            box-shadow: var(--shadow-small);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
         }
 
         .stat-number {
             font-size: 2.5rem;
             font-weight: 700;
             color: var(--primary-red);
+            font-family: var(--font-serif);
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
 
         .stat-label {
-            font-size: 0.9rem;
-            color: var(--warm-gray-medium);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            color: var(--warm-gray-dark);
+            font-weight: 500;
+            font-size: 1rem;
         }
 
-        /* Client Logos */
         .clients-section {
-            padding: 60px 0;
-            background: var(--warm-white);
+            padding: 80px 0;
+            background: var(--deep-charcoal);
+            color: white;
+        }
+
+        .clients-section .section-title {
+            color: white;
+            text-align: center;
         }
 
         .clients-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2px;
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
         }
 
         .client-item {
+            background: rgba(255, 255, 255, 0.1);
             padding: 20px;
-            background: white;
-            border: 1px solid rgba(0, 0, 0, 0.05);
-            font-weight: 500;
-            color: var(--warm-gray-dark);
+            border-radius: 8px;
             text-align: center;
-            font-size: 0.95rem;
+            font-weight: 500;
             transition: all 0.3s ease;
         }
 
         .client-item:hover {
-            background: var(--warm-gray-light);
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
         }
 
-        /* Values Section */
         .values-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 40px;
             margin-top: 50px;
         }
 
         .value-card {
-            padding: 40px 30px;
             background: white;
+            padding: 40px 30px;
             border-radius: 12px;
             text-align: center;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s ease;
+            border-left: 4px solid var(--primary-red);
+            box-shadow: var(--shadow-small);
+            transition: all 0.3s ease;
         }
 
         .value-card:hover {
             transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
         }
 
         .value-icon {
@@ -376,38 +405,38 @@
         }
 
         .value-description {
-            font-size: 0.95rem;
-            line-height: 1.6;
             color: var(--warm-gray-dark);
+            line-height: 1.6;
+            font-size: 1rem;
         }
 
         /* Footer */
         .footer {
-            background: var(--deep-charcoal);
+            background: #1a1a1a;
             color: var(--warm-gray-light);
-            padding: 60px 0 40px;
+            padding: 50px 0 35px;
         }
 
         .footer-content {
             display: grid;
             grid-template-columns: 2fr 1fr;
-            gap: 60px;
-            margin-bottom: 40px;
+            gap: 50px;
+            align-items: start;
+            margin-bottom: 32px;
         }
 
         .footer-links {
             display: flex;
-            gap: 30px;
-            margin-bottom: 30px;
+            gap: 25px;
             flex-wrap: wrap;
+            margin-bottom: 16px;
         }
 
         .footer-links a {
             color: var(--warm-gray-light);
             text-decoration: none;
-            font-weight: 500;
-            font-size: 0.9rem;
             transition: color 0.3s ease;
+            font-size: 0.95rem;
         }
 
         .footer-links a:hover {
@@ -415,27 +444,28 @@
         }
 
         .company-info h4 {
-            color: white;
-            font-size: 1.3rem;
+            color: var(--primary-red);
+            font-size: 1.1rem;
             margin-bottom: 16px;
+            font-family: var(--font-serif);
         }
 
         .company-info p {
-            margin-bottom: 12px;
-            font-size: 0.9rem;
+            margin-bottom: 8px;
             line-height: 1.6;
+            font-size: 0.95rem;
         }
 
         .imprint-section h4 {
-            color: var(--warm-gray-light);
+            color: var(--primary-red);
             font-size: 1rem;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
+            font-family: var(--font-serif);
         }
 
         .imprint-details p {
-            font-size: 0.85rem;
             margin-bottom: 6px;
-            color: var(--warm-gray-light);
+            font-size: 0.85rem;
         }
 
         .footer-bottom {
@@ -445,7 +475,25 @@
             font-size: 0.85rem;
         }
 
+        .trademark-notice {
+            margin-top: 8px;
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+
         /* Responsive Design */
+        @media (max-width: 1024px) {
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+
         @media (max-width: 768px) {
             .container,
             .nav-container {
@@ -460,9 +508,12 @@
                 display: none;
             }
 
-            .about-content {
-                grid-template-columns: 1fr;
-                gap: 40px;
+            .page-title {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
             }
 
             .stats-grid {
@@ -496,13 +547,22 @@
                      onerror="this.parentElement.classList.add('logo-failed');">
                 <span class="logo-fallback">contraco</span>
             </a>
-            <ul class="nav-menu">
-                <li><a href="https://contraco.co.kr/#services" class="nav-link">서비스</a></li>
-                <li><a href="https://contraco.co.kr/#methodology" class="nav-link">방법론</a></li>
-                <li><a href="https://contraco.co.kr/insights.html" class="nav-link">Insights</a></li>
-                <li><a href="https://contraco.co.kr/about.html" class="nav-link">에 대한</a></li>
-                <li><a href="https://contraco.co.kr/#contact" class="nav-link">연락하다</a></li>
-            </ul>
+            <div style="display: flex; align-items: center;">
+                <ul class="nav-menu">
+                    <li><a href="https://contraco.co.kr/" class="nav-link">집</a></li>
+                    <li><a href="https://contraco.co.kr/#services" class="nav-link">서비스</a></li>
+                    <li><a href="https://contraco.co.kr/#methodology" class="nav-link">방법론</a></li>
+                    <li><a href="https://contraco.co.kr/insights.html" class="nav-link">Insights</a></li>
+                    <li><a href="https://contraco.co.kr/about.html" class="nav-link active">에 대한</a></li>
+                    <li><a href="https://contraco.co.kr/contact.html" class="nav-link">연락하다</a></li>
+                </ul>
+                <div class="language-switcher">
+                    <a href="https://contraco.net/about.html" class="lang-link">EN</a>
+                    <a href="https://contraco.de/about.html" class="lang-link">DE</a>
+                    <a href="https://contraco.ru/about.html" class="lang-link">RU</a>
+                    <a href="https://contraco.co.kr/about.html" class="lang-link active">KO</a>
+                </div>
+            </div>
         </div>
     </nav>
 
@@ -655,11 +715,60 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 contraco. 모든 권리 보유.</p>
-                <div class="trademark-notice">
-                    <p>공명 방법™은 contraco의 등록 상표입니다.</p>
-                </div>
+                <p class="trademark-notice">공명 방법™은 contraco의 등록 상표입니다.</p>
             </div>
         </div>
     </footer>
+
+    <script>
+        // Enhanced logo fallback with retry mechanism
+        (function() {
+            const logo = document.getElementById('site-logo');
+            const logoImg = logo.querySelector('img');
+            let retryCount = 0;
+            const maxRetries = 2;
+            
+            function handleLogoError() {
+                if (retryCount < maxRetries) {
+                    retryCount++;
+                    setTimeout(() => {
+                        logoImg.src = 'https://contraco.net/Logo_rectangle.svg';
+                    }, 1000 * retryCount);
+                } else {
+                    logo.classList.add('logo-failed');
+                }
+            }
+            
+            if (logoImg.complete && logoImg.naturalHeight === 0) {
+                handleLogoError();
+            }
+            
+            logoImg.addEventListener('error', handleLogoError);
+            
+            logoImg.addEventListener('load', function() {
+                logo.classList.remove('logo-failed');
+            });
+        })();
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(248, 246, 243, 0.98)';
+                navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                navbar.style.background = 'rgba(248, 246, 243, 0.95)';
+                navbar.style.boxShadow = 'none';
+            }
+        });
+
+        // Analytics tracking
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'page_view', {
+                page_title: 'About Us - contraco.co.kr',
+                page_location: window.location.href
+            });
+        }
+    </script>
 </body>
 </html>
