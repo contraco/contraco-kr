@@ -25,4 +25,4 @@ Disallow: /temp/
 Disallow: /tmp/
 
 # XML Sitemap location
-Sitemap: https://www.contraco.co.kr/sitemap.xml
+Sitemap: https://contraco.co.kr/sitemap.xml
