@@ -136,11 +136,43 @@
         }
 
         .logo {
-            font-family: 'Crimson Text', serif;
-            font-size: 28px;
-            font-weight: 600;
-            color: var(--deep-charcoal);
+            margin-left: 60px;
+            display: flex;
+            align-items: center;
             text-decoration: none;
+        }
+
+        .logo img {
+            height: 36px;
+            width: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Logo Fallback Styling */
+        .logo-fallback {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-red);
+            letter-spacing: -0.02em;
+            font-family: var(--font-serif);
+            transition: all 0.3s ease;
+            display: none;
+        }
+
+        .logo:hover .logo-fallback {
+            transform: scale(1.05);
+        }
+
+        .logo.logo-failed img {
+            display: none;
+        }
+
+        .logo.logo-failed .logo-fallback {
+            display: block;
         }
 
         .nav-menu {
@@ -485,7 +517,12 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="https://contraco.co.kr/" class="logo">contraco</a>
+            <a href="https://contraco.co.kr/" class="logo" id="site-logo">
+                <img src="https://contraco.net/Logo_rectangle.svg"
+                     alt="contraco"
+                     onerror="this.parentElement.classList.add('logo-failed');">
+                <span class="logo-fallback">contraco</span>
+            </a>
             <ul class="nav-menu">
                 <li><a href="https://contraco.co.kr/" class="nav-link">집</a></li>
                 <li><a href="https://contraco.co.kr/#services" class="nav-link">서비스</a></li>
