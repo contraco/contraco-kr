@@ -136,17 +136,43 @@
         }
 
         .logo {
+            margin-left: 60px;
             display: flex;
             align-items: center;
-            gap: 12px;
             text-decoration: none;
-            color: var(--deep-charcoal);
         }
 
-        .logo-text {
-            font-family: var(--font-serif);
+        .logo img {
+            height: 36px;
+            width: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Logo Fallback Styling */
+        .logo-fallback {
             font-size: 1.8rem;
-            font-weight: 600;
+            font-weight: 700;
+            color: var(--primary-red);
+            letter-spacing: -0.02em;
+            font-family: var(--font-serif);
+            transition: all 0.3s ease;
+            display: none;
+        }
+
+        .logo:hover .logo-fallback {
+            transform: scale(1.05);
+        }
+
+        .logo.logo-failed img {
+            display: none;
+        }
+
+        .logo.logo-failed .logo-fallback {
+            display: block;
         }
 
         .nav-menu {
@@ -428,8 +454,11 @@
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <a href="https://contraco.co.kr/" class="logo">
-                    <div class="logo-text">contraco</div>
+                <a href="https://contraco.co.kr/" class="logo" id="site-logo">
+                    <img src="https://contraco.net/Logo_rectangle.svg"
+                         alt="contraco"
+                         onerror="this.parentElement.classList.add('logo-failed');">
+                    <span class="logo-fallback">contraco</span>
                 </a>
                 <nav>
                     <ul class="nav-menu">
