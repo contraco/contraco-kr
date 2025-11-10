@@ -542,7 +542,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="https://contraco.co.kr/" class="logo" id="site-logo">
-                <img src="https://contraco.net/Logo_rectangle.svg" 
+                <img src="https://contraco.co.kr/Logo_rectangle.svg" 
                      alt="contraco" 
                      onerror="this.parentElement.classList.add('logo-failed');">
                 <span class="logo-fallback">contraco</span>
@@ -742,7 +742,7 @@
                 if (retryCount < maxRetries) {
                     retryCount++;
                     setTimeout(() => {
-                        logoImg.src = 'https://contraco.net/Logo_rectangle.svg';
+                        logoImg.src = 'https://contraco.co.kr/Logo_rectangle.svg';
                     }, 1000 * retryCount);
                 } else {
                     logo.classList.add('logo-failed');
