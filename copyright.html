@@ -323,20 +323,22 @@
             font-style: italic;
         }
 
-        .footer-privacy {
-            margin-top: 12px;
-            font-size: 0.85rem;
+        .footer-privacy-links {
+            margin-top: 24px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
         }
 
-        .footer-privacy a {
-            color: rgba(255, 255, 255, 0.8);
+        .footer-privacy-links a {
+            color: var(--warm-gray-medium);
             text-decoration: none;
+            font-size: 0.85rem;
             transition: color 0.3s ease;
         }
 
-        .footer-privacy a:hover {
+        .footer-privacy-links a:hover {
             color: var(--primary-red);
-            text-decoration: underline;
         }
 
         /* Responsive Design */
@@ -534,9 +536,11 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                <div class="footer-privacy-links">
+                    <a href="/privacy-statement.html">개인정보 보호 정책</a>
+                </div>
                 <p>&copy; 2025 contraco. 모든 권리 보유.</p>
                 <p class="trademark-notice">공명 방법™은 contraco의 등록 상표입니다.</p>
-                <p class="footer-privacy"><a href="/privacy-statement.html">개인정보 보호 정책</a></p>
             </div>
         </div>
     </footer>
