@@ -22,7 +22,7 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-868WGCC45D', {
-            page_title: 'Privacy Statement - contraco',
+            page_title: '개인정보 보호 정책 - contraco',
             page_location: window.location.href
         });
     </script>
@@ -30,12 +30,54 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Favicon -->
+    <!-- COMPLETE Favicon Set -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#C00000">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
     <meta name="theme-color" content="#C00000">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="contraco 개인정보 보호 정책 - 개인정보를 수집, 사용 및 보호하는 방법을 알아보세요. GDPR 및 CCPA 준수 데이터 보호 정책.">
+    <meta name="keywords" content="개인정보 보호 정책, 데이터 보호, GDPR, CCPA, contraco 개인정보 정책">
+    <meta name="author" content="contraco">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://contraco.co.kr/privacy-statement.html">
+    <meta property="og:title" content="개인정보 보호 정책 | contraco">
+    <meta property="og:description" content="contraco가 귀하의 개인정보를 보호하는 방법을 알아보세요. GDPR 및 CCPA 준수 개인정보 보호 정책.">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "개인정보 보호 정책",
+        "description": "contraco 개인정보 보호 정책 - 데이터 보호 정책 및 관행",
+        "url": "https://contraco.co.kr/privacy-statement.html",
+        "publisher": {
+            "@type": "Organization",
+            "name": "contraco",
+            "url": "https://contraco.co.kr/",
+            "logo": "https://contraco.co.kr/Logo_rectangle.svg"
+        }
+    }
+    </script>
 
     <style>
         /* CSS Variables - Updated Brand Colors */
@@ -111,14 +153,33 @@
         }
 
         .logo {
-            display: flex;
+            display: inline-flex;
             align-items: center;
+            justify-content: center;
             text-decoration: none;
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
+            transition: opacity 0.3s ease;
+        }
+
+        .logo-fallback {
             font-size: 1.8rem;
             font-weight: 700;
             color: var(--primary-red);
             letter-spacing: -0.02em;
             font-family: var(--font-serif);
+            display: none;
+        }
+
+        .logo.logo-failed img {
+            display: none;
+        }
+
+        .logo.logo-failed .logo-fallback {
+            display: block;
         }
 
         .nav-menu {
@@ -151,7 +212,7 @@
             font-size: 3.5rem;
             font-weight: 700;
             color: var(--deep-charcoal);
-            font-family: var(--font-serif);
+            font-family: var(--font-sans);
             margin-bottom: 20px;
         }
 
@@ -175,7 +236,7 @@
             color: var(--primary-red);
             margin-bottom: 20px;
             font-weight: 600;
-            font-family: var(--font-serif);
+            font-family: var(--font-sans);
             padding-bottom: 10px;
             border-bottom: 2px solid var(--warm-gray-light);
         }
@@ -266,7 +327,7 @@
             color: var(--primary-red);
             font-size: 1.1rem;
             margin-bottom: 16px;
-            font-family: var(--font-serif);
+            font-family: var(--font-sans);
         }
 
         .company-info p {
@@ -312,7 +373,12 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="/" class="logo">contraco</a>
+            <a href="/" class="logo" id="site-logo">
+                <img src="https://contraco.co.kr/Logo_rectangle.svg"
+                     alt="contraco"
+                     onerror="this.parentElement.classList.add('logo-failed');">
+                <span class="logo-fallback">contraco</span>
+            </a>
             <ul class="nav-menu">
                 <li><a href="/#services" class="nav-link">서비스</a></li>
                 <li><a href="/#methodology" class="nav-link">방법론</a></li>
@@ -336,13 +402,13 @@
         <div class="container">
             <!-- Data Controller -->
             <div class="privacy-section">
-                <h2>1. 데이터 관리자</h2>
+                <h2>1. 정보 관리 책임자</h2>
                 <div class="contact-box">
                     <p>
                         <strong>contraco</strong><br>
                         1209 10th Ln.<br>
                         Ava, MO 65608<br>
-                        United States<br><br>
+                        미국<br><br>
                         <strong>이메일:</strong> dpo@contraco.com<br>
                         <strong>전화:</strong> +1 (312) 940-0326
                     </p>
@@ -351,26 +417,26 @@
 
             <!-- Data Collection -->
             <div class="privacy-section">
-                <h2>2. 데이터 수집</h2>
-                <p>당사는 다음 범주의 개인정보를 수집하고 처리합니다:</p>
+                <h2>2. 정보 수집</h2>
+                <p>당사는 다음과 같은 범주의 개인정보를 수집하고 처리합니다:</p>
                 <ul>
                     <li>연락처 정보 (이름, 이메일 주소, 전화번호)</li>
                     <li>조직 및 직업 세부 정보</li>
                     <li>상담 및 문의 양식에 제공된 정보</li>
-                    <li>당사 서비스와 관련된 커뮤니케이션 이력</li>
-                    <li>쿠키 및 분석을 통한 웹사이트 사용 데이터</li>
+                    <li>서비스와 관련된 커뮤니케이션 기록</li>
+                    <li>쿠키 및 분석 도구를 통한 웹사이트 사용 데이터</li>
                 </ul>
             </div>
 
             <!-- Purpose of Data Processing -->
             <div class="privacy-section">
-                <h2>3. 데이터 처리 목적</h2>
+                <h2>3. 정보 처리 목적</h2>
                 <p>귀하의 개인정보는 다음 목적으로만 처리됩니다:</p>
                 <ul>
                     <li>상담 문의 및 서비스 요청에 대한 응답</li>
-                    <li>디지털 트랜스포메이션 및 컨설팅 서비스 제공</li>
+                    <li>디지털 혁신 및 컨설팅 서비스 제공</li>
                     <li>비즈니스 커뮤니케이션 및 관계 관리</li>
-                    <li>당사 서비스 및 웹사이트 경험 개선</li>
+                    <li>서비스 및 웹사이트 경험 개선</li>
                     <li>법적 및 규제 의무 준수</li>
                 </ul>
             </div>
@@ -378,37 +444,37 @@
             <!-- Legal Basis -->
             <div class="privacy-section">
                 <h2>4. 법적 근거</h2>
-                <p>당사는 다음 법적 근거에 따라 귀하의 개인정보를 처리합니다:</p>
+                <p>당사는 다음과 같은 법적 근거에 따라 귀하의 개인정보를 처리합니다:</p>
                 <ul>
-                    <li><strong>동의:</strong> 귀하가 데이터 처리에 명시적으로 동의한 경우 (Article 6(1)(a) GDPR)</li>
-                    <li><strong>계약:</strong> 계약 의무 이행을 위한 경우 (Article 6(1)(b) GDPR)</li>
-                    <li><strong>정당한 이익:</strong> 비즈니스 운영 및 서비스 개선을 위한 경우 (Article 6(1)(f) GDPR)</li>
-                    <li><strong>법적 의무:</strong> 적용 법률 준수를 위한 경우 (Article 6(1)(c) GDPR)</li>
+                    <li><strong>동의:</strong> 귀하가 데이터 처리에 명시적으로 동의할 때 (GDPR 제6조(1)(a))</li>
+                    <li><strong>계약:</strong> 계약 의무 이행을 위해 (GDPR 제6조(1)(b))</li>
+                    <li><strong>정당한 이익:</strong> 비즈니스 운영 및 서비스 개선을 위해 (GDPR 제6조(1)(f))</li>
+                    <li><strong>법적 의무:</strong> 적용 가능한 법률 준수를 위해 (GDPR 제6조(1)(c))</li>
                 </ul>
             </div>
 
             <!-- Data Retention -->
             <div class="privacy-section">
-                <h2>5. 데이터 보관</h2>
-                <p>당사는 위에 명시된 목적에 필요한 기간 또는 법률에서 요구하는 기간 동안만 개인정보를 보관합니다:</p>
+                <h2>5. 정보 보유</h2>
+                <p>당사는 위에 명시된 목적에 필요한 기간 동안 또는 법률에서 요구하는 기간 동안만 개인정보를 보유합니다:</p>
                 <ul>
-                    <li>비즈니스 문의 데이터: 일반적으로 3년간 보관</li>
-                    <li>계약 관련 데이터: 비즈니스 관계 기간 및 법정 보관 기간</li>
-                    <li>마케팅 커뮤니케이션: 동의 철회 시까지</li>
-                    <li>법적 준수 데이터: 해당 규정에서 요구하는 기간</li>
+                    <li>비즈니스 문의 데이터: 일반적으로 3년 동안 보유</li>
+                    <li>계약 관련 데이터: 비즈니스 관계 기간 및 법정 보존 기간</li>
+                    <li>마케팅 커뮤니케이션: 동의가 철회될 때까지</li>
+                    <li>법적 준수 데이터: 해당 규정에서 요구하는 대로</li>
                 </ul>
             </div>
 
             <!-- Data Security -->
             <div class="privacy-section">
-                <h2>6. 데이터 보안</h2>
+                <h2>6. 정보 보안</h2>
                 <p>당사는 귀하의 개인정보를 보호하기 위해 포괄적인 기술적 및 조직적 조치를 구현합니다:</p>
                 <ul>
                     <li>SSL/TLS 프로토콜을 사용한 암호화된 데이터 전송</li>
                     <li>접근 제어를 통한 안전한 데이터 저장</li>
                     <li>정기적인 보안 평가 및 업데이트</li>
                     <li>데이터 보호 모범 사례에 대한 직원 교육</li>
-                    <li>데이터 유출에 대한 사고 대응 절차</li>
+                    <li>데이터 침해에 대한 사고 대응 절차</li>
                 </ul>
             </div>
 
@@ -417,21 +483,21 @@
                 <h2>7. 귀하의 권리</h2>
                 <p>해당 데이터 보호법에 따라 귀하는 다음과 같은 권리를 가집니다:</p>
                 <ul>
-                    <li><strong>접근권:</strong> 귀하의 개인정보 사본 요청</li>
-                    <li><strong>정정권:</strong> 부정확하거나 불완전한 데이터 수정</li>
-                    <li><strong>삭제권:</strong> 귀하의 데이터 삭제 요청 ("잊혀질 권리")</li>
-                    <li><strong>제한권:</strong> 귀하의 데이터 처리 제한</li>
-                    <li><strong>이동권:</strong> 구조화된 형식으로 귀하의 데이터 수령</li>
-                    <li><strong>반대권:</strong> 특정 유형의 처리에 반대</li>
+                    <li><strong>접근:</strong> 개인정보 사본 요청</li>
+                    <li><strong>정정:</strong> 부정확하거나 불완전한 데이터 수정</li>
+                    <li><strong>삭제:</strong> 데이터 삭제 요청 ("잊혀질 권리")</li>
+                    <li><strong>제한:</strong> 데이터 처리 제한</li>
+                    <li><strong>이동:</strong> 구조화된 형식으로 데이터 수신</li>
+                    <li><strong>반대:</strong> 특정 유형의 처리에 반대</li>
                     <li><strong>동의 철회:</strong> 이전에 제공한 동의를 언제든지 철회</li>
                 </ul>
-                <p>이러한 권리를 행사하려면 섹션 1에 제공된 정보를 사용하여 당사에 문의하시기 바랍니다.</p>
+                <p>이러한 권리를 행사하려면 섹션 1에 제공된 정보를 사용하여 당사에 문의하십시오.</p>
             </div>
 
             <!-- Third-Party Services -->
             <div class="privacy-section">
                 <h2>8. 제3자 서비스</h2>
-                <p>당사는 웹사이트를 운영하고 서비스를 제공하기 위해 신중하게 선택된 제3자 서비스를 사용합니다:</p>
+                <p>당사는 웹사이트 운영 및 서비스 제공을 위해 신중하게 선택된 제3자 서비스를 사용합니다:</p>
 
                 <h3>분석 서비스</h3>
                 <ul>
@@ -443,17 +509,17 @@
                     <li><strong>FormSubmit:</strong> 안전한 문의 양식 처리</li>
                 </ul>
 
-                <p>이러한 서비스는 유럽 경제 지역 외부에서 데이터를 처리할 수 있습니다. 당사는 적절한 보호 조치가 마련되어 있음을 보장합니다.</p>
+                <p>이러한 서비스는 유럽 경제 지역 외부에서 데이터를 처리할 수 있습니다. 당사는 적절한 보호 조치가 마련되어 있는지 확인합니다.</p>
             </div>
 
             <!-- International Data Transfers -->
             <div class="privacy-section">
                 <h2>9. 국제 데이터 전송</h2>
-                <p>당사는 미국에서 운영되므로 귀하의 데이터가 미국으로 전송되어 처리될 수 있습니다. 당사는 국제 데이터 전송에 대한 적절한 보호 조치를 보장합니다:</p>
+                <p>당사는 미국에서 운영하므로 귀하의 데이터가 미국으로 전송되어 처리될 수 있습니다. 당사는 국제 데이터 전송에 대한 적절한 보호 조치를 보장합니다:</p>
                 <ul>
-                    <li>유럽위원회가 승인한 표준 계약 조항</li>
+                    <li>유럽 집행위원회가 승인한 표준 계약 조항</li>
                     <li>데이터 보호를 위한 적절한 보안 조치</li>
-                    <li>해당 국제 데이터 전송 규정 준수</li>
+                    <li>적용 가능한 국제 데이터 전송 규정 준수</li>
                 </ul>
             </div>
 
@@ -466,53 +532,53 @@
                 <ul>
                     <li><strong>필수 쿠키:</strong> 웹사이트 운영에 필요 (비활성화 불가)</li>
                     <li><strong>분석 쿠키:</strong> 웹사이트 사용 패턴 이해에 도움</li>
-                    <li><strong>기능 쿠키:</strong> 귀하의 기본 설정 및 설정 저장</li>
+                    <li><strong>기능성 쿠키:</strong> 기본 설정 및 설정 기억</li>
                 </ul>
 
-                <p>브라우저 설정을 통해 쿠키 기본 설정을 관리할 수 있습니다. 특정 쿠키를 비활성화하면 웹사이트 기능에 영향을 미칠 수 있습니다.</p>
+                <p>브라우저 설정을 통해 쿠키 기본 설정을 관리할 수 있습니다. 특정 쿠키를 비활성화하면 웹사이트 기능에 영향을 줄 수 있습니다.</p>
             </div>
 
             <!-- Contact for Privacy Matters -->
             <div class="privacy-section">
-                <h2>11. 개인정보 보호 관련 문의</h2>
-                <p>본 개인정보 보호 정책 또는 당사의 데이터 처리 관행에 대한 질문, 우려 사항 또는 요청이 있으신 경우:</p>
+                <h2>11. 개인정보 관련 문의</h2>
+                <p>이 개인정보 보호 정책 또는 당사의 데이터 처리 관행에 관한 질문, 우려 사항 또는 요청이 있으신 경우:</p>
                 <div class="contact-box">
                     <p>
                         <strong>데이터 보호 담당자</strong><br>
                         이메일: dpo@contraco.com<br>
                         전화: +1 (312) 940-0326<br><br>
-                        당사는 모든 개인정보 보호 관련 문의에 30일 이내에 응답하는 것을 목표로 합니다.
+                        당사는 모든 개인정보 관련 문의에 30일 이내에 응답하도록 노력합니다.
                     </p>
                 </div>
             </div>
 
             <!-- Updates -->
             <div class="privacy-section">
-                <h2>12. 본 정책의 업데이트</h2>
-                <p>당사는 관행이나 법적 요구사항의 변경을 반영하기 위해 본 개인정보 보호 정책을 업데이트할 수 있습니다. 업데이트는 수정된 "최종 업데이트" 날짜와 함께 본 페이지에 게시됩니다. 중요한 변경 사항의 경우 웹사이트를 통해 또는 직접 커뮤니케이션을 통해 추가 공지를 제공할 수 있습니다.</p>
+                <h2>12. 정책 업데이트</h2>
+                <p>당사는 관행 또는 법적 요구 사항의 변경을 반영하기 위해 이 개인정보 보호 정책을 업데이트할 수 있습니다. 업데이트는 수정된 "최종 업데이트" 날짜와 함께 이 페이지에 게시됩니다. 중요한 변경 사항이 있는 경우 웹사이트 또는 직접 통신을 통해 추가 공지를 제공할 수 있습니다.</p>
             </div>
 
             <!-- Complaints -->
             <div class="privacy-section">
                 <h2>13. 감독 기관</h2>
-                <p>귀하의 데이터 보호 권리가 침해되었다고 판단되는 경우, 귀하는 현지 데이터 보호 감독 기관에 불만을 제기할 권리가 있습니다. EU 거주자의 경우, 이는 귀하의 회원국 내 감독 기관입니다. 당사는 먼저 당사에 문의하여 우려 사항을 해결할 것을 권장합니다.</p>
+                <p>귀하의 데이터 보호 권리가 침해되었다고 생각되는 경우 현지 데이터 보호 감독 기관에 불만을 제기할 권리가 있습니다. EU 거주자의 경우 회원국의 감독 기관입니다. 당사는 귀하가 먼저 당사에 문의하여 문제를 해결하도록 권장합니다.</p>
             </div>
 
             <!-- GDPR Rights for European Residents -->
             <div class="privacy-section">
                 <h2>14. 유럽 거주자를 위한 GDPR 권리</h2>
-                <p>귀하가 유럽 경제 지역(EEA), 영국 또는 스위스에 거주하는 경우, 일반 데이터 보호 규정(GDPR)에 따라 향상된 권리를 가집니다:</p>
+                <p>귀하가 유럽 경제 지역(EEA), 영국 또는 스위스에 거주하는 경우 일반 데이터 보호 규정(GDPR)에 따라 강화된 권리를 가집니다:</p>
                 <ul>
-                    <li><strong>접근권:</strong> 당사가 귀하의 데이터를 처리하는지 확인하고 사본을 받을 수 있는 권리</li>
-                    <li><strong>정정권:</strong> 부정확하거나 불완전한 개인정보를 수정할 수 있는 권리</li>
-                    <li><strong>삭제권:</strong> 특정 상황에서 삭제를 요청할 수 있는 권리</li>
-                    <li><strong>처리 제한권:</strong> 당사가 귀하의 데이터를 사용하는 방식을 제한할 수 있는 권리</li>
-                    <li><strong>데이터 이동권:</strong> 기계 판독 가능한 형식으로 귀하의 데이터를 받을 수 있는 권리</li>
-                    <li><strong>반대권:</strong> 정당한 이익 또는 직접 마케팅을 기반으로 한 처리에 반대할 수 있는 권리</li>
-                    <li><strong>자동화된 의사 결정 관련 권리:</strong> 전적으로 자동화된 결정의 대상이 되지 않을 권리</li>
+                    <li><strong>접근 권리:</strong> 당사가 귀하의 데이터를 처리하는지 확인하고 사본 받기</li>
+                    <li><strong>정정 권리:</strong> 부정확한 데이터를 수정하거나 불완전한 개인정보 완성</li>
+                    <li><strong>삭제 권리:</strong> 특정 상황에서 삭제 요청</li>
+                    <li><strong>처리 제한 권리:</strong> 데이터 사용 방법 제한</li>
+                    <li><strong>데이터 이동 권리:</strong> 기계 판독 가능한 형식으로 데이터 수신</li>
+                    <li><strong>반대 권리:</strong> 정당한 이익 또는 직접 마케팅에 기반한 처리에 반대</li>
+                    <li><strong>자동화된 의사 결정 관련 권리:</strong> 전적으로 자동화된 결정의 대상이 되지 않음</li>
                 </ul>
-                <p>당사는 귀하의 요청에 1개월 이내에 응답하며, 복잡한 요청의 경우 2개월 연장 가능합니다. 요청이 명백히 근거가 없거나 과도하지 않는 한 수수료가 부과되지 않습니다.</p>
-                <p>GDPR 관련 문의는 dpo@contraco.com으로 당사 데이터 보호 담당자에게 문의하시기 바랍니다.</p>
+                <p>당사는 1개월 이내에 귀하의 요청에 응답하며, 복잡한 요청의 경우 2개월 연장 가능합니다. 요청이 명백히 근거가 없거나 과도하지 않는 한 수수료가 부과되지 않습니다.</p>
+                <p>GDPR 관련 문의는 dpo@contraco.com으로 데이터 보호 담당자에게 연락하십시오</p>
             </div>
 
             <!-- California Privacy Rights -->
@@ -520,12 +586,12 @@
                 <h2>15. 캘리포니아 개인정보 보호 권리</h2>
                 <p>캘리포니아 거주자는 캘리포니아 소비자 개인정보 보호법(CCPA)에 따라 추가 권리를 가집니다:</p>
                 <ul>
-                    <li>어떤 개인정보가 수집되는지 알 권리</li>
-                    <li>개인정보를 삭제할 권리</li>
-                    <li>개인정보 판매를 거부할 권리 (당사는 개인정보를 판매하지 않습니다)</li>
-                    <li>개인정보 보호 권리 행사에 대한 차별 금지 권리</li>
+                    <li>수집되는 개인정보를 알 권리</li>
+                    <li>개인정보 삭제 권리</li>
+                    <li>개인정보 판매 거부 권리 (당사는 개인정보를 판매하지 않습니다)</li>
+                    <li>개인정보 보호 권리 행사에 대한 비차별 권리</li>
                 </ul>
-                <p>이러한 권리를 행사하기 위해 캘리포니아 거주자는 섹션 11의 정보를 사용하여 당사에 문의할 수 있습니다.</p>
+                <p>이러한 권리를 행사하려면 캘리포니아 거주자는 섹션 11의 정보를 사용하여 당사에 문의할 수 있습니다.</p>
             </div>
         </div>
     </section>
@@ -544,8 +610,8 @@
                         <a href="/contact.html">문의하기</a>
                         <a href="/privacy-statement.html" style="color: var(--primary-red);">개인정보 보호</a>
                     </div>
-                    <h4>contraco 미국</h4>
-                    <p>전략적 명확성, 기술적 지능, 심리적 깊이를 결합한 프리미엄 트랜스포메이션 컨설팅.</p>
+                    <h4>contraco USA</h4>
+                    <p>전략적 명확성, 기술적 지능, 심리적 깊이를 결합한 프리미엄 혁신 컨설팅</p>
                     <p><strong>일반 문의:</strong> transformation@contraco.net</p>
                     <p><strong>데이터 보호:</strong> dpo@contraco.com</p>
                     <p><strong>전화:</strong> +1 (312) 940-0326</p>
@@ -555,14 +621,45 @@
                     <p><strong>contraco</strong></p>
                     <p>1209 10th Ln.</p>
                     <p>Ava, MO 65608</p>
-                    <p>United States</p>
+                    <p>미국</p>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 contraco. All rights reserved.</p>
-                <p style="margin-top: 8px; font-size: 0.8rem; opacity: 0.8;">The Resonance Method™는 contraco의 상표입니다.</p>
+                <p style="margin-top: 8px; font-size: 0.8rem; opacity: 0.8;">The Resonance Method™ is a trademark of contraco.</p>
             </div>
         </div>
     </footer>
+
+    <script>
+        // Enhanced logo fallback with retry mechanism
+        (function() {
+            const logo = document.getElementById('site-logo');
+            const logoImg = logo.querySelector('img');
+            let retryCount = 0;
+            const maxRetries = 2;
+
+            function handleLogoError() {
+                if (retryCount < maxRetries) {
+                    retryCount++;
+                    setTimeout(() => {
+                        logoImg.src = 'https://contraco.co.kr/Logo_rectangle.svg';
+                    }, 1000 * retryCount);
+                } else {
+                    logo.classList.add('logo-failed');
+                }
+            }
+
+            if (logoImg.complete && logoImg.naturalHeight === 0) {
+                handleLogoError();
+            }
+
+            logoImg.addEventListener('error', handleLogoError);
+
+            logoImg.addEventListener('load', function() {
+                logo.classList.remove('logo-failed');
+            });
+        })();
+    </script>
 </body>
 </html>
