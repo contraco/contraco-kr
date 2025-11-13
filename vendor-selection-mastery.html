@@ -592,6 +592,118 @@
             font-weight: bold;
         }
 
+        /* Red Flags */
+        .red-flags {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .flag-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #dc3545;
+            box-shadow: var(--shadow-small);
+        }
+
+        .flag-icon {
+            color: #dc3545;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .flag-title {
+            color: #dc3545;
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        .flag-description {
+            color: var(--warm-gray-dark);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* Best Practices */
+        .best-practices {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .practice-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #28a745;
+            box-shadow: var(--shadow-small);
+        }
+
+        .practice-icon {
+            color: #28a745;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .practice-title {
+            color: #28a745;
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        .practice-description {
+            color: var(--warm-gray-dark);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* Cost Comparison Table */
+        .cost-comparison {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
+            margin: 40px 0;
+        }
+
+        .comparison-header {
+            background: var(--primary-red);
+            color: white;
+            padding: 20px 30px;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .comparison-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            padding: 20px 30px;
+            border-bottom: 1px solid var(--warm-gray-light);
+        }
+
+        .comparison-row:last-child {
+            border-bottom: none;
+        }
+
+        .comparison-row:nth-child(even) {
+            background: var(--warm-white);
+        }
+
+        .comparison-label {
+            font-weight: 600;
+            color: var(--deep-charcoal);
+        }
+
+        .comparison-value {
+            text-align: right;
+            color: var(--warm-gray-dark);
+        }
+
         /* CTA Section */
         .cta-section {
             background: var(--deep-charcoal);
@@ -780,7 +892,9 @@
                 font-size: 1.1rem;
             }
 
-            .evaluation-criteria {
+            .evaluation-criteria,
+            .red-flags,
+            .best-practices {
                 grid-template-columns: 1fr;
             }
 
@@ -801,6 +915,15 @@
                 right: 20px;
             }
 
+            .comparison-row {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .comparison-value {
+                text-align: left;
+            }
+
             .footer-content {
                 grid-template-columns: 1fr;
                 gap: 30px;
@@ -818,7 +941,9 @@
             }
 
             .criteria-card,
-            .phase-card {
+            .phase-card,
+            .flag-card,
+            .practice-card {
                 margin: 0;
             }
         }
@@ -1140,8 +1265,172 @@
             </div>
         </section>
 
-        <!-- Due Diligence Section -->
+        <!-- Red Flags Section -->
         <section class="content-section gray">
+            <div class="container">
+                <div class="article-container">
+                    <h2 class="content-title">중요한 위험 신호: 철수 신호</h2>
+
+                    <p class="content-text">특정 벤더 행동 및 특성은 문제가 있는 파트너십의 신뢰할 수 있는 예측 변수 역할을 합니다. 이러한 위험 신호를 무시하는 조직은 경고가 나타날 때 평가를 조기에 종료하는 조직보다 선정 후 어려움을 8배 더 높게 경험합니다.</p>
+
+                    <div class="red-flags">
+                        <div class="flag-card">
+                            <div class="flag-icon">⚠️</div>
+                            <h5 class="flag-title">압력 전술 및 인위적 긴급성</h5>
+                            <p class="flag-description">평가 완료 전에 인위적인 마감일, 제한된 시간 제안 또는 압력 결정을 만드는 벤더. 품질 벤더는 조작이 아닌 장점으로 경쟁합니다.</p>
+                        </div>
+
+                        <div class="flag-card">
+                            <div class="flag-icon">⚠️</div>
+                            <h5 class="flag-title">참조 제공 불능</h5>
+                            <p class="flag-description">귀하의 산업에서 유사한 규모의 회사로부터 고객 참조를 제공할 수 없거나 제공하지 않는 벤더. 참조 저항은 발견되기를 원하지 않는 문제를 나타냅니다.</p>
+                        </div>
+
+                        <div class="flag-card">
+                            <div class="flag-icon">⚠️</div>
+                            <h5 class="flag-title">모호한 로드맵 약속</h5>
+                            <p class="flag-description">특정 일정이나 약속 없이 일반 사항을 포함하는 제품 로드맵. 베이퍼웨어 약속은 천천히 실현되거나 전혀 실현되지 않아 역량 격차를 남깁니다.</p>
+                        </div>
+
+                        <div class="flag-card">
+                            <div class="flag-icon">⚠️</div>
+                            <h5 class="flag-title">POC 테스트 저항</h5>
+                            <p class="flag-description">실제 데이터 및 통합 시나리오로 개념 증명 테스트를 권장하지 않거나 저항하는 벤더. POC 저항은 숨기고 싶어하는 역량 격차를 나타냅니다.</p>
+                        </div>
+
+                        <div class="flag-card">
+                            <div class="flag-icon">⚠️</div>
+                            <h5 class="flag-title">불명확하거나 징벌적인 종료 조건</h5>
+                            <p class="flag-description">불명확한 데이터 내보내기 조항, 과도한 종료 수수료 또는 다년 종속 요구 사항이 있는 계약 조건. 가치에 자신이 있는 벤더는 고객을 가두지 않습니다.</p>
+                        </div>
+
+                        <div class="flag-card">
+                            <div class="flag-icon">⚠️</div>
+                            <h5 class="flag-title">무시하는 기술 팀</h5>
+                            <p class="flag-description">통합 문제, 아키텍처 질문 또는 보안 요구 사항을 무시하는 기술 팀과 함께 판매 주도 프레젠테이션. 기술적 무시는 구현 문제를 예측합니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Best Practices Section -->
+        <section class="content-section white">
+            <div class="container">
+                <div class="article-container">
+                    <h2 class="content-title">파트너십 모범 사례</h2>
+
+                    <p class="content-text">우수한 벤더 파트너십은 거래 공급업체 관계와 구별되는 공통 특성을 공유합니다. 이러한 관행을 구현하는 조직은 95%의 벤더 만족도 등급과 60% 더 긴 파트너십 기간을 달성합니다.</p>
+
+                    <div class="best-practices">
+                        <div class="practice-card">
+                            <div class="practice-icon">✓</div>
+                            <h5 class="practice-title">투명한 커뮤니케이션</h5>
+                            <p class="practice-description">양측의 도전, 한계 및 우려에 대한 정직한 논의. 투명성은 놀라움을 방지하고 협력적 문제 해결을 가능하게 합니다.</p>
+                        </div>
+
+                        <div class="practice-card">
+                            <div class="practice-icon">✓</div>
+                            <h5 class="practice-title">임원 후원</h5>
+                            <p class="practice-description">파트너십 성공에 대해 책임이 있는 양측의 지명된 임원. 임원 참여는 신속한 에스컬레이션과 전략적 정렬을 가능하게 합니다.</p>
+                        </div>
+
+                        <div class="practice-card">
+                            <div class="practice-icon">✓</div>
+                            <h5 class="practice-title">정기적인 비즈니스 검토</h5>
+                            <p class="practice-description">파트너십 건전성, 가치 전달 및 로드맵 정렬을 평가하는 분기별 검토. 구조화된 검토는 문제가 위기가 되기 전에 조기에 식별합니다.</p>
+                        </div>
+
+                        <div class="practice-card">
+                            <div class="practice-icon">✓</div>
+                            <h5 class="practice-title">성과 책임성</h5>
+                            <p class="practice-description">비성과에 대한 결과가 있는 정의된 성공 지표. 책임성은 양측이 파트너십 성공에 대한 약속을 유지하도록 보장합니다.</p>
+                        </div>
+
+                        <div class="practice-card">
+                            <div class="practice-icon">✓</div>
+                            <h5 class="practice-title">혁신 협업</h5>
+                            <p class="practice-description">벤더가 새로운 역량에 대한 조기 액세스를 제공하는 공동 혁신 이니셔티브. 혁신 파트너십은 경쟁 우위를 창출합니다.</p>
+                        </div>
+
+                        <div class="practice-card">
+                            <div class="practice-icon">✓</div>
+                            <h5 class="practice-title">상호 가치 창출</h5>
+                            <p class="practice-description">양측이 거래 경제를 넘어 파트너십 성공으로부터 이익을 얻습니다. 정렬된 인센티브는 지속 가능한 장기 관계를 창출합니다.</p>
+                        </div>
+                    </div>
+
+                    <div class="strategy-framework">
+                        <h4>파트너십 진화 경로</h4>
+                        <p>우수한 벤더 관계는 세 단계를 거쳐 진화합니다: <strong>공급업체</strong> (거래, 가격 중심), <strong>파트너</strong> (협력, 가치 중심), <strong>전략적 동맹</strong> (통합, 혁신 중심). 최고 가치 파트너십은 양 조직이 상호 경쟁 우위를 창출하는 혁신에 공동 투자하는 전략적 동맹 상태에 도달합니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TCO Analysis Section -->
+        <section class="content-section gray">
+            <div class="container">
+                <div class="article-container">
+                    <h2 class="content-title">총 소유 비용 분석</h2>
+
+                    <p class="content-text">포괄적인 TCO 분석은 벤더 선정 결정의 진정한 재무 영향을 드러냅니다. 엄격한 TCO 분석을 수행하는 조직은 초기 라이선스 비용만 집중하는 조직에 비해 40%의 경우에서 다른 벤더를 선택합니다.</p>
+
+                    <div class="cost-comparison">
+                        <div class="comparison-header">5년 TCO 구성 요소 (Fortune 500 기업 소프트웨어)</div>
+                        <div class="comparison-row">
+                            <div class="comparison-label">초기 소프트웨어 라이선스</div>
+                            <div class="comparison-value">$5M-$15M</div>
+                            <div class="comparison-value">TCO의 18-22%</div>
+                        </div>
+                        <div class="comparison-row">
+                            <div class="comparison-label">구현 및 통합</div>
+                            <div class="comparison-value">$8M-$20M</div>
+                            <div class="comparison-value">TCO의 28-35%</div>
+                        </div>
+                        <div class="comparison-row">
+                            <div class="comparison-label">연간 유지 보수 및 지원</div>
+                            <div class="comparison-value">$2M-$5M/년</div>
+                            <div class="comparison-value">TCO의 20-25%</div>
+                        </div>
+                        <div class="comparison-row">
+                            <div class="comparison-label">교육 및 변화 관리</div>
+                            <div class="comparison-value">$1M-$3M</div>
+                            <div class="comparison-value">TCO의 3-8%</div>
+                        </div>
+                        <div class="comparison-row">
+                            <div class="comparison-label">맞춤화 및 구성</div>
+                            <div class="comparison-value">$2M-$6M</div>
+                            <div class="comparison-value">TCO의 6-12%</div>
+                        </div>
+                        <div class="comparison-row">
+                            <div class="comparison-label">인프라 및 운영</div>
+                            <div class="comparison-value">$1M-$4M</div>
+                            <div class="comparison-value">TCO의 4-8%</div>
+                        </div>
+                        <div class="comparison-row">
+                            <div class="comparison-label">지속적인 개발 및 업그레이드</div>
+                            <div class="comparison-value">$2M-$5M</div>
+                            <div class="comparison-value">TCO의 5-10%</div>
+                        </div>
+                        <div class="comparison-row">
+                            <div class="comparison-label"><strong>총 5년 TCO</strong></div>
+                            <div class="comparison-value"><strong>$28M-$72M</strong></div>
+                            <div class="comparison-value"><strong>100%</strong></div>
+                        </div>
+                    </div>
+
+                    <div class="warning-box">
+                        <h4>TCO 추정 오류</h4>
+                        <p>조직은 일반적으로 벤더 추정치만 의존할 때 총 소유 비용을 35-60% 과소평가합니다. 가장 큰 추정 오류는 통합 복잡성(평균 80% 과소평가), 맞춤화 요구 사항(60% 과소평가) 및 교육/변화 관리(70% 과소평가)에서 발생합니다.</p>
+                        <p><strong>모범 사례:</strong> 벤더 예측만 의존하는 대신 구현 경험이 있는 독립 컨설턴트를 참여시켜 현실적인 TCO 추정치를 얻으세요.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Due Diligence Section -->
+        <section class="content-section white">
             <div class="container">
                 <div class="article-container">
                     <h2 class="content-title">실사 체크리스트</h2>
@@ -1375,6 +1664,28 @@
                 });
             });
         }
+
+        // Animate cards on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.phase-card, .criteria-card, .flag-card, .practice-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'all 0.6s ease';
+            observer.observe(card);
+        });
     </script>
 </body>
 </html>
