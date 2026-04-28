@@ -444,6 +444,18 @@
             box-shadow: var(--shadow-medium);
         }
 
+        .form-privacy-notice {
+            font-size: 0.82rem;
+            color: var(--warm-gray-dark);
+            margin-bottom: 16px;
+            line-height: 1.5;
+        }
+
+        .form-privacy-notice a {
+            color: var(--primary-red);
+            text-decoration: underline;
+        }
+
         /* Footer */
         .footer {
             background: #1a1a1a;
@@ -723,6 +735,7 @@
                                 <textarea id="message" name="message" class="form-textarea" placeholder="귀하의 변화 목표와 과제에 대해 알려주세요..." required></textarea>
                             </div>
                             
+                            <p class="form-privacy-notice">이 양식을 제출함으로써 귀하는 당사의 <a href="/privacy-statement.html">개인정보 보호 정책</a>에 동의하며, 여기에는 법적 근거, 데이터 보유 기간, 그리고 관리 및 삭제 권리가 포함됩니다.</p>
                             <button type="submit" class="form-button">
                                 요청 보내기
                             </button>
