@@ -1,0 +1,5 @@
+Contact: mailto:security@contraco.com
+Expires: 2027-05-12T00:00:00Z
+Canonical: https://contraco.co.kr/.well-known/security.txt
+Preferred-Languages: ko, en
+Policy: https://contraco.co.kr/privacy-statement.html
