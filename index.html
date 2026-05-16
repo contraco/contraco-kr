@@ -69,155 +69,132 @@
     <meta property="og:locale" content="ko_KR">
     <meta property="og:site_name" content="contraco">
     
-    <!-- Structured Data -->
+    <!-- Unified Entity Graph: contraco.co.kr -->
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "contraco",
-        "alternateName": "contraco USA",
-        "url": "https://contraco.co.kr/",
-        "image": "https://contraco.co.kr/Logo_rectangle.svg",
-        "logo": {
-            "@type": "ImageObject",
-            "url": "https://contraco.co.kr/Logo_rectangle.svg",
-            "width": 400,
-            "height": 100
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "WebSite",
+            "@id": "https://contraco.co.kr/#website",
+            "url": "https://contraco.co.kr/",
+            "name": "contraco",
+            "inLanguage": "ko",
+            "description": "AI 전략 및 디지털 혁신 — contraco 한국",
+            "significantLink": [
+                "https://contraco.co.kr/about.html",
+                "https://contraco.co.kr/insights.html",
+                "https://contraco.co.kr/resonance-method.html"
+            ]
         },
-        "description": "1998년 설립된 디지털 전환 컨설팅 기업. 미국, 독일, 러시아, 한국의 Fortune 500 기업을 대상으로 28년간의 경험을 보유하고 있습니다.",
-        "email": "transformation@contraco.net",
-        "telephone": "+13129400326",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "1209 10th Ln.",
-            "addressLocality": "Ava",
-            "addressRegion": "MO",
-            "postalCode": "65608",
-            "addressCountry": "US"
-        },
-        "foundingDate": "1998",
-        "founder": {
-            "@type": "Person",
-            "name": "Frank Meltke",
-            "jobTitle": "Founder & CEO",
+        {
+            "@type": "Organization",
+            "@id": "https://contraco.net/#organization",
+            "name": "contraco",
+            "alternateName": "contraco USA",
+            "url": "https://contraco.net/",
+            "image": "https://contraco.co.kr/Logo_rectangle.svg",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://contraco.co.kr/Logo_rectangle.svg",
+                "width": 400,
+                "height": 100
+            },
+            "description": "1998년 설립된 디지털 전환 컨설팅 기업. 미국, 독일, 러시아, 한국의 Fortune 500 기업을 대상으로 28년간의 경험을 보유하고 있습니다.",
+            "email": "transformation@contraco.net",
+            "telephone": "+13129400326",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "1209 10th Ln.",
+                "addressLocality": "Ava",
+                "addressRegion": "MO",
+                "postalCode": "65608",
+                "addressCountry": "US"
+            },
+            "foundingDate": "1998",
+            "founder": { "@id": "https://meltke.com/#person" },
+            "areaServed": "Global",
+            "brand": {
+                "@type": "Brand",
+                "name": "contraco",
+                "url": "https://contraco.com/brand.html"
+            },
             "sameAs": [
-                "https://www.wikidata.org/wiki/Q139680598",
-                "https://orcid.org/0009-0006-9001-0078",
-                "https://scholar.google.com/citations?user=Md3quCcAAAAJ",
-                "https://www.linkedin.com/in/frankmeltke",
-                "https://www.google.com/search?kgmid=/g/11rqtzq613"
+                "https://www.wikidata.org/wiki/Q139681815",
+                "https://www.linkedin.com/company/contraco",
+                "https://contraco.com",
+                "https://contraco.net",
+                "https://contraco.de",
+                "https://contraco.ru"
             ],
             "knowsAbout": [
-                "디지털 전환",
+                "디지털 전환 컨설팅",
+                "기업 AI 전략",
                 "AI 도입 및 변화 관리",
                 "AI 시대를 위한 조직 설계",
-                "정보 검색",
-                "검색 시스템",
-                "레조넌스 방법론",
-                "가격 심리학",
-                "행동 경제학",
-                "문화 간 전환",
-                "기업 AI 전략"
+                "가격 심리학 및 행동 경제학",
+                "디지털 전환 ROI 측정",
+                "DACH, CIS 및 APAC 시장의 문화 간 전환",
+                "파일럿에서 기업 전체로 AI 확장"
             ],
-            "hasCredential": [
-                {
-                    "@type": "EducationalOccupationalCredential",
-                    "credentialCategory": "degree",
-                    "name": "Diplom",
-                    "educationalLevel": "Graduate",
-                    "recognizedBy": {
-                        "@type": "EducationalOrganization",
-                        "name": "Fachhochschule des Bundes für öffentliche Verwaltung"
+            "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "전환 컨설팅 서비스",
+                "itemListElement": [
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "AI 전략 프레임워크: 파일럿에서 기업 규모로",
+                            "url": "https://contraco.co.kr/ai-strategy-framework.html"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "AI 도입 연구 및 변화 관리",
+                            "url": "https://contraco.co.kr/ai-adoption-research.html"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "레조넌스 방법론",
+                            "url": "https://contraco.co.kr/resonance-method.html"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "문화적 적응: 한국 시장 진입",
+                            "url": "https://contraco.co.kr/cultural-adaptation-guide.html"
+                        }
                     }
-                }
-            ]
+                ]
+            }
         },
-        "areaServed": "Global",
-        "brand": {
-            "@type": "Brand",
-            "name": "contraco",
-            "url": "https://contraco.com/brand.html"
-        },
-        "sameAs": [
-            "https://www.linkedin.com/company/contraco",
-            "https://contraco.com",
-            "https://contraco.net",
-            "https://contraco.de",
-            "https://contraco.ru"
-        ],
-        "knowsAbout": [
-            "디지털 전환 컨설팅",
-            "기업 AI 전략",
-            "AI 도입 및 변화 관리",
-            "AI 시대를 위한 조직 설계",
-            "가격 심리학 및 행동 경제학",
-            "디지털 전환 ROI 측정",
-            "공급업체 선정 및 기술 조달",
-            "DACH, CIS 및 APAC 시장의 문화 간 전환",
-            "AI 저항의 심리학",
-            "파일럿에서 기업 전체로 AI 확장"
-        ],
-        "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "전환 컨설팅 서비스",
-            "itemListElement": [
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "AI 전략 프레임워크: 파일럿에서 기업 규모로",
-                        "description": "개념 증명을 넘어 전사적 AI 이니셔티브 확장을 위한 전략적 프레임워크.",
-                        "url": "https://contraco.co.kr/ai-strategy-framework.html"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "AI 도입 연구 및 변화 관리",
-                        "description": "AI 전환의 73%가 실패하는 심리적 장벽을 다루는 연구 기반 프레임워크.",
-                        "url": "https://contraco.co.kr/ai-adoption-research.html"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "AI 시대를 위한 조직 설계",
-                        "description": "50개 이상의 Fortune 500 전환 사례를 기반으로 한 AI 준비 조직 설계 구조 프레임워크.",
-                        "url": "https://contraco.co.kr/organizational-design-ai.html"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "디지털 전환 ROI",
-                        "description": "전환 이니셔티브의 투자 수익률 측정 및 증명.",
-                        "url": "https://contraco.co.kr/digital-transformation-roi.html"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "레조넌스 방법론",
-                        "description": "지속 가능한 기업 전환을 위한 독자적 방법론.",
-                        "url": "https://contraco.co.kr/resonance-method.html"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "문화적 적응: 한국 시장 진입",
-                        "description": "한국 시장 진입을 위한 전문 컨설팅.",
-                        "url": "https://contraco.co.kr/cultural-adaptation-guide.html"
-                    }
-                }
+        {
+            "@type": "Person",
+            "@id": "https://meltke.com/#person",
+            "name": "Frank Meltke",
+            "alternateName": "Frank Contraco",
+            "url": "https://meltke.com",
+            "jobTitle": "Founder & CEO",
+            "worksFor": { "@id": "https://contraco.net/#organization" },
+            "sameAs": [
+                "https://www.wikidata.org/wiki/Q139680598",
+                "https://www.linkedin.com/in/frankmeltke",
+                "https://orcid.org/0009-0006-9001-0078",
+                "https://scholar.google.com/citations?user=Md3quCcAAAAJ",
+                "https://www.google.com/search?kgmid=/g/11rqtzq613",
+                "https://www.researchgate.net/profile/Frank-Meltke"
             ]
         }
-    }
+    ]
+}
     </script>
     
     <style>
