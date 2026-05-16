@@ -1,0 +1,28 @@
+# contraco
+
+> 1998년 Frank Meltke가 설립한 디지털 전환 컨설팅 기업. Fortune 500 기업을 28년간 지원한 경험 보유.
+
+## contraco 소개
+
+contraco는 전략적 명확성, 기술적 지능, 심리적 깊이를 결합한 프리미엄 전환 컨설팅 기업입니다. Microsoft, Deutsche Telekom, Thomas Cook, KPMG, SK Telecom을 포함하여 4개 대륙 30개국에서 50개 이상의 글로벌 브랜드를 지원했습니다.
+
+## 창립자
+
+Frank Meltke(프랭크 멜트케, Frank Contraco Meltke)는 독일의 발명가, 기업가, 디지털 전환 전문가입니다. 2003년 특허 DE10313420A1 보유. 경희대학교 MIS 프로그램 객원 강사. BBC Global Minds 인사이트 패널리스트. 레조넌스 방법론™ 저자. Wikidata: Q139680598.
+
+## 방법론
+
+- [레조넌스 방법론™](https://contraco.co.kr/resonance-method.html): 전략적 명확성, 기술적 지능, 심리적 깊이 간의 3차원 실행 격차를 식별하는 독점 전환 프레임워크.
+
+## 서비스
+
+- [AI 전략 프레임워크](https://contraco.co.kr/ai-strategy-framework.html): 파일럿에서 기업 규모로 AI 확장
+- [AI 도입 연구](https://contraco.co.kr/ai-adoption-research.html): AI 전환 실패의 심리적 장벽
+- [AI 시대를 위한 조직 설계](https://contraco.co.kr/organizational-design-ai.html)
+- [디지털 전환 ROI](https://contraco.co.kr/digital-transformation-roi.html)
+- [문화적 적응: 한국 시장 진입](https://contraco.co.kr/cultural-adaptation-guide.html)
+
+## 식별자
+
+- Wikidata (contraco): Q139681815
+- Frank Meltke Wikidata: Q139680598
