@@ -11,8 +11,18 @@ contraco는 30개국 50개 이상의 글로벌 브랜드를 지원한 프리미�
 - [Insights](https://contraco.co.kr/insights.html)
 - [회사 소개](https://contraco.co.kr/about.html)
 
+## 에이전트 커머스
+
+- [에이전트 커머스의 여름 2026](https://contraco.co.kr/agentic-commerce-summer-2026.html)
+- [에이전트 커머스 제어 레이어](https://contraco.co.kr/agentic-commerce-control-layer.html)
+- [에이전트 커머스의 기회의 창](https://contraco.co.kr/agentic-commerce-window.html)
+- [누가 AI 에이전트를 감사하는가](https://contraco.co.kr/who-audits-the-ai-agent.html)
+- [첫 번째 에이전트 구매: 여행](https://contraco.co.kr/first-agentic-purchase-travel.html)
+- [다크 에이전트 트래픽](https://contraco.co.kr/dark-agentic-traffic.html)
+- [은행과 에이전트 커머스 신뢰](https://contraco.co.kr/banks-agentic-commerce-trust.html)
+
 ## 설립자
 
-Frank Meltke — 독일 발명가, Wikidata Q139680598, 특허 DE10313420A1 (2003), 경희대학교 경영대학 MIS 강의.
+Frank Meltke, 독일 발명가, Wikidata Q139680598, 특허 DE10313420A1 (2003), 경희대학교 경영대학 MIS 강의.
 
 - [Frank Meltke](https://meltke.com)
