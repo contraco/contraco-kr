@@ -173,20 +173,36 @@
         body { font-family: var(--font-sans); line-height: 1.7; color: var(--deep-charcoal); background-color: var(--warm-white); -webkit-font-smoothing: antialiased; }
         .container { max-width: var(--container-max); margin: 0 auto; padding: 0 40px; }
 
-        .navbar { position: fixed; top: 0; width: 100%; background: rgba(248,246,243,0.95); backdrop-filter: blur(10px); z-index: 1000; padding: 12px 0; transition: all var(--transition-fast); }
-        .nav-container { position: relative; display: flex; justify-content: space-between; align-items: center; max-width: var(--container-max); margin: 0 auto; padding: 0 40px; }
-        .logo { margin-left: 60px; display: flex; align-items: center; text-decoration: none; }
+        /* Header */
+        .header {
+            background: var(--warm-white);
+            padding: 20px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo { display: flex; align-items: center; text-decoration: none; }
         .logo img { height: 58px; width: auto; transition: transform var(--transition-fast); }
         .logo:hover img { transform: scale(1.05); }
         .logo-fallback { font-size: 1.8rem; font-weight: 700; color: var(--primary-red); letter-spacing: -0.02em; font-family: var(--font-serif); display: none; }
         .logo.logo-failed img { display: none; }
         .logo.logo-failed .logo-fallback { display: block; }
-        .nav-menu { margin-right: 60px; display: flex; list-style: none; gap: 35px; }
+        .nav-menu { display: flex; align-items: center; gap: 40px; }
+        .nav-menu ul { display: flex; list-style: none; gap: 35px; }
         .nav-link { text-decoration: none; color: var(--deep-charcoal); font-weight: 500; font-size: 0.95rem; transition: color var(--transition-fast); position: relative; }
         .nav-link:hover { color: var(--primary-red); }
         .nav-link::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -5px; left: 0; background-color: var(--primary-red); transition: width var(--transition-fast); }
         .nav-link:hover::after { width: 100%; }
-        .language-switcher { display: flex; gap: 8px; margin-left: 20px; }
+        .language-switcher { display: flex; gap: 15px; }
         .lang-link { text-decoration: none; color: var(--warm-gray-medium); font-weight: 500; font-size: 0.85rem; padding: 4px 8px; border-radius: 4px; transition: all var(--transition-fast); }
         .lang-link:hover { color: var(--primary-red); background-color: var(--warm-white); }
         .lang-link.active { color: var(--primary-red); background-color: var(--warm-white); font-weight: 600; }
@@ -298,10 +314,9 @@
         .trademark-notice { margin-top: 8px; font-size: 0.8rem; opacity: 0.8; }
 
         @media (max-width: 768px) {
-            .container, .nav-container { padding: 0 20px; }
-            .logo { margin-left: 20px; }
+            .container { padding: 0 20px; }
             .nav-menu { display: none; }
-            .nav-menu.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(248,246,243,0.98); padding: 20px; gap: 16px; box-shadow: var(--shadow-medium); }
+            .nav-menu.active { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(248,246,243,0.98); padding: 20px; gap: 16px; box-shadow: var(--shadow-medium); }
             .menu-toggle { display: block; }
             .hero-title { font-size: 2.2rem; }
             .gap-label { width: 100px; font-size: 0.78rem; }
@@ -330,7 +345,7 @@
         "@type": "WebPage",
         "url": "https://contraco.co.kr/dark-agentic-traffic.html",
         "name": "다크 에이전트 트래픽: 당신의 리포트가 변화를 숨기는 이유 | contraco",
-        "dateModified": "2026-08-20",
+        "dateModified": "2026-08-24",
         "inLanguage": "ko",
         "isPartOf": { "@id": "https://contraco.co.kr/" }
     }
@@ -339,32 +354,39 @@
     </head>
 <body>
 
-<nav class="navbar">
-    <div class="nav-container">
-        <a href="https://contraco.co.kr/" class="logo" id="site-logo">
-            <img src="https://contraco.co.kr/Logo_rectangle.svg" alt="contraco" onerror="this.parentElement.classList.add('logo-failed');">
-            <span class="logo-fallback">contraco</span>
-        </a>
-        <div style="display: flex; align-items: center;">
-            <button class="menu-toggle" onclick="toggleMenu()" aria-label="메뉴 열기">&#9776;</button>
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="https://contraco.co.kr/" class="nav-link">홈</a></li>
-                <li><a href="https://contraco.co.kr/#services" class="nav-link">서비스</a></li>
-                <li><a href="https://contraco.co.kr/#methodology" class="nav-link">방법론</a></li>
-                <li><a href="https://contraco.co.kr/insights.html" class="nav-link">Insights</a></li>
-                <li><a href="https://contraco.co.kr/press.html" class="nav-link">보도자료</a></li>
-                <li><a href="https://contraco.co.kr/about.html" class="nav-link">회사 소개</a></li>
-                <li><a href="https://contraco.co.kr/contact.html" class="nav-link">연락처</a></li>
-            </ul>
-            <div class="language-switcher">
-                <a href="https://contraco.net/dark-agentic-traffic.html" class="lang-link">EN</a>
-                <a href="https://contraco.de/dark-agentic-traffic.html" class="lang-link">DE</a>
-                <a href="https://contraco.ru/dark-agentic-traffic.html" class="lang-link">RU</a>
-                <a href="https://contraco.co.kr/dark-agentic-traffic.html" class="lang-link active">KO</a>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="https://contraco.co.kr/" class="logo" id="site-logo">
+                    <img src="https://contraco.co.kr/Logo_rectangle.svg"
+                         alt="contraco"
+                         onerror="this.parentElement.classList.add('logo-failed');">
+                    <span class="logo-fallback">contraco</span>
+                </a>
+
+                <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+
+                <nav class="nav-menu" id="nav-menu">
+                    <ul>
+                        <li><a href="https://contraco.co.kr/" class="nav-link">홈</a></li>
+                        <li><a href="https://contraco.co.kr/#services" class="nav-link">서비스</a></li>
+                        <li><a href="https://contraco.co.kr/#methodology" class="nav-link">방법론</a></li>
+                        <li><a href="https://contraco.co.kr/insights.html" class="nav-link">Insights</a></li>
+                    <li><a href="https://contraco.co.kr/press.html" class="nav-link">보도자료</a></li>
+                        <li><a href="https://contraco.co.kr/about.html" class="nav-link">회사 소개</a></li>
+                        <li><a href="https://contraco.co.kr/contact.html" class="nav-link">연락처</a></li>
+                    </ul>
+                    <div class="language-switcher">
+                        <a href="https://contraco.net/dark-agentic-traffic.html" class="lang-link">EN</a>
+                        <a href="https://contraco.de/dark-agentic-traffic.html" class="lang-link">DE</a>
+                        <a href="https://contraco.com/" class="lang-link">RU</a>
+                        <a href="https://contraco.co.kr/dark-agentic-traffic.html" class="lang-link active">KO</a>
+                    </div>
+                </nav>
             </div>
         </div>
-    </div>
-</nav>
+    </header>
 
 <main class="main-content">
 
@@ -608,12 +630,12 @@
     })();
 
     function toggleMenu() {
-        const menu = document.getElementById('nav-menu');
-        menu.classList.toggle('open');
+        const navMenu = document.getElementById('nav-menu');
+        navMenu.classList.toggle('active');
     }
 
     window.addEventListener('scroll', function() {
-        const navbar = document.querySelector('.navbar');
+        const navbar = document.querySelector('.header');
         if (window.scrollY > 50) { navbar.style.background = 'rgba(248,246,243,0.98)'; navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)'; }
         else { navbar.style.background = 'rgba(248,246,243,0.95)'; navbar.style.boxShadow = 'none'; }
     });

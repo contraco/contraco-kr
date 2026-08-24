@@ -200,30 +200,25 @@
             padding: 0 40px;
         }
 
-        /* Navbar */
-        .navbar {
+        /* Header */
+        .header {
+            background: var(--warm-white);
+            padding: 20px 0;
             position: fixed;
             top: 0;
-            width: 100%;
-            background: rgba(248, 246, 243, 0.95);
-            backdrop-filter: blur(10px);
+            left: 0;
+            right: 0;
             z-index: 1000;
-            padding: 12px 0;
-            transition: all var(--transition-fast);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
         }
 
-        .nav-container {
-            position: relative;
+        .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            max-width: var(--container-max);
-            margin: 0 auto;
-            padding: 0 40px;
         }
 
         .logo {
-            margin-left: 60px;
             display: flex;
             align-items: center;
             text-decoration: none;
@@ -245,7 +240,12 @@
         .logo.logo-failed .logo-fallback { display: block; }
 
         .nav-menu {
-            margin-right: 60px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .nav-menu ul {
             display: flex;
             list-style: none;
             gap: 35px;
@@ -275,7 +275,7 @@
 
         .nav-link:hover::after { width: 100%; }
 
-        .language-switcher { display: flex; gap: 8px; margin-left: 20px; }
+        .language-switcher { display: flex; gap: 15px; }
 
         .lang-link {
             text-decoration: none;
@@ -741,10 +741,9 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            .container, .nav-container { padding: 0 20px; }
-            .logo { margin-left: 20px; }
+            .container { padding: 0 20px; }
             .nav-menu { display: none; }
-            .nav-menu.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(248,246,243,0.98); padding: 20px; gap: 16px; box-shadow: var(--shadow-medium); }
+            .nav-menu.active { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(248,246,243,0.98); padding: 20px; gap: 16px; box-shadow: var(--shadow-medium); }
             .menu-toggle { display: block; }
             .hero-title { font-size: 2.2rem; }
             .hero-subtitle { font-size: 1rem; }
@@ -797,7 +796,7 @@
         "@type": "WebPage",
         "url": "https://contraco.co.kr/agentic-commerce-window.html",
         "name": "창: 12개월, 85%, 하나의 결정 | contraco",
-        "dateModified": "2026-08-20",
+        "dateModified": "2026-08-24",
         "inLanguage": "ko",
         "isPartOf": { "@id": "https://contraco.co.kr/" }
     }
@@ -806,33 +805,39 @@
     </head>
 <body>
 
-<!-- Navigation -->
-<nav class="navbar">
-    <div class="nav-container">
-        <a href="https://contraco.co.kr/" class="logo" id="site-logo">
-            <img src="https://contraco.co.kr/Logo_rectangle.svg" alt="contraco" onerror="this.parentElement.classList.add('logo-failed');">
-            <span class="logo-fallback">contraco</span>
-        </a>
-        <div style="display: flex; align-items: center;">
-            <button class="menu-toggle" onclick="toggleMenu()" aria-label="메뉴 열기">&#9776;</button>
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="https://contraco.co.kr/" class="nav-link">홈</a></li>
-                <li><a href="https://contraco.co.kr/#services" class="nav-link">서비스</a></li>
-                <li><a href="https://contraco.co.kr/#methodology" class="nav-link">방법론</a></li>
-                <li><a href="https://contraco.co.kr/insights.html" class="nav-link">Insights</a></li>
-                <li><a href="https://contraco.co.kr/press.html" class="nav-link">보도자료</a></li>
-                <li><a href="https://contraco.co.kr/about.html" class="nav-link">회사 소개</a></li>
-                <li><a href="https://contraco.co.kr/contact.html" class="nav-link">연락처</a></li>
-            </ul>
-            <div class="language-switcher">
-                <a href="https://contraco.net/agentic-commerce-window.html" class="lang-link">EN</a>
-                <a href="https://contraco.de/agentic-commerce-window.html" class="lang-link">DE</a>
-                <a href="https://contraco.ru/agentic-commerce-window.html" class="lang-link">RU</a>
-                <a href="https://contraco.co.kr/agentic-commerce-window.html" class="lang-link active">KO</a>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="https://contraco.co.kr/" class="logo" id="site-logo">
+                    <img src="https://contraco.co.kr/Logo_rectangle.svg"
+                         alt="contraco"
+                         onerror="this.parentElement.classList.add('logo-failed');">
+                    <span class="logo-fallback">contraco</span>
+                </a>
+
+                <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+
+                <nav class="nav-menu" id="nav-menu">
+                    <ul>
+                        <li><a href="https://contraco.co.kr/" class="nav-link">홈</a></li>
+                        <li><a href="https://contraco.co.kr/#services" class="nav-link">서비스</a></li>
+                        <li><a href="https://contraco.co.kr/#methodology" class="nav-link">방법론</a></li>
+                        <li><a href="https://contraco.co.kr/insights.html" class="nav-link">Insights</a></li>
+                    <li><a href="https://contraco.co.kr/press.html" class="nav-link">보도자료</a></li>
+                        <li><a href="https://contraco.co.kr/about.html" class="nav-link">회사 소개</a></li>
+                        <li><a href="https://contraco.co.kr/contact.html" class="nav-link">연락처</a></li>
+                    </ul>
+                    <div class="language-switcher">
+                        <a href="https://contraco.net/agentic-commerce-window.html" class="lang-link">EN</a>
+                        <a href="https://contraco.de/agentic-commerce-window.html" class="lang-link">DE</a>
+                        <a href="https://contraco.com/" class="lang-link">RU</a>
+                        <a href="https://contraco.co.kr/agentic-commerce-window.html" class="lang-link active">KO</a>
+                    </div>
+                </nav>
             </div>
         </div>
-    </div>
-</nav>
+    </header>
 
 <!-- Main Content -->
 <main class="main-content">
@@ -1114,12 +1119,12 @@
     })();
 
     function toggleMenu() {
-        document.getElementById('nav-menu').classList.toggle('open');
+        document.getElementById('nav-menu').classList.toggle('active');
     }
 
     // Navbar scroll effect
     window.addEventListener('scroll', function() {
-        const navbar = document.querySelector('.navbar');
+        const navbar = document.querySelector('.header');
         if (window.scrollY > 50) {
             navbar.style.background = 'rgba(248, 246, 243, 0.98)';
             navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
