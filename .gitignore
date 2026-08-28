@@ -42,3 +42,6 @@ desktop.ini
 # Test files
 coverage/
 .nyc_output/
+
+# Claude Code local memory, never committed
+CLAUDE.local.md
