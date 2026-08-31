@@ -4,25 +4,30 @@
 
 contraco는 30개국 50개 이상의 글로벌 브랜드를 지원한 프리미엄 혁신 컨설팅 회사입니다.
 
-## 주요 페이지
+## 중점 분야
 
-- [홈](https://contraco.co.kr/)
-- [Resonance Method](https://contraco.co.kr/resonance-method.html)
-- [Insights](https://contraco.co.kr/insights.html)
-- [회사 소개](https://contraco.co.kr/about.html)
+contraco는 AI 에이전트가 직접 구매하기 시작하는 지점, 즉 유통 아키텍처와 책임 소재가 만나는 지점을 다룹니다.
 
-## 에이전트 커머스
+- 에이전트 커머스 거버넌스: 성숙도, 제어 레이어, 위임 체인, 감사 가능성.
+- AI 가시성: 제품 데이터와 인리치먼트, 그리고 에이전트에게 상품이 보이지 않는 이유.
+- 여행 유통: 에이전트가 예약 화면에 도달하지 않을 때 일어나는 일.
 
-- [에이전트 커머스의 여름 2026](https://contraco.co.kr/agentic-commerce-summer-2026.html)
-- [에이전트 커머스 제어 레이어](https://contraco.co.kr/agentic-commerce-control-layer.html)
-- [에이전트 커머스의 기회의 창](https://contraco.co.kr/agentic-commerce-window.html)
-- [누가 AI 에이전트를 감사하는가](https://contraco.co.kr/who-audits-the-ai-agent.html)
-- [첫 번째 에이전트 구매: 여행](https://contraco.co.kr/first-agentic-purchase-travel.html)
-- [다크 에이전트 트래픽](https://contraco.co.kr/dark-agentic-traffic.html)
-- [은행과 에이전트 커머스 신뢰](https://contraco.co.kr/banks-agentic-commerce-trust.html)
+## 방법론
+
+Resonance Method는 28년의 실무를 통해 개발된 contraco의 고유한 디지털 혁신 프레임워크입니다. 전략적 명확성, 기술적 지능, 심리적 깊이라는 세 가지 차원의 실행 격차를 다룹니다.
 
 ## 설립자
 
 Frank Meltke, 독일 발명가, Wikidata Q139680598, 특허 DE10313420A1 (2003), 경희대학교 경영대학 MIS 강의.
 
 - [Frank Meltke](https://meltke.com)
+- [Agentic Commerce Research](https://agentic.contraco.net)
+
+## 언어
+
+contraco는 네 개의 도메인에서 발행합니다: [영어](https://contraco.net), [독일어](https://contraco.de), [러시아어](https://contraco.ru), [한국어](https://contraco.co.kr).
+
+## 페이지
+
+<!-- AUTO-PAGES:START -->
+<!-- AUTO-PAGES:END -->
