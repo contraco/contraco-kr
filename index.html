@@ -15,18 +15,6 @@
     <meta name="robots" content="index, follow">
     <meta name="naver-site-verification" content="ee4ab626e9ce6e2d4a6c5daf839fe7c9168585aa" />
     
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-868WGCC45D"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-868WGCC45D', {
-            page_title: '비즈니스를 위한 디지털 혁신 - contraco',
-            page_location: window.location.href
-        });
-    </script>
-    
     <!-- Complete hreflang for International SEO -->
     <link rel="alternate" href="https://contraco.com/" hreflang="x-default" />
     <link rel="alternate" hreflang="en" href="https://contraco.net/" />
@@ -967,7 +955,7 @@
     "@type": "WebPage",
     "url": "https://contraco.co.kr/",
     "name": "디지털 혁신 컨설팅 | Frank Meltke | contraco",
-    "dateModified": "2026-08-30",
+    "dateModified": "2026-09-07",
     "inLanguage": "ko",
     "isPartOf": {
         "@type": "WebSite",
@@ -1120,7 +1108,7 @@
                     <p><strong>전화:</strong> +1 (312) 940-0326</p>
                     <p>모든 문의에 24시간 이내에 응답합니다.</p>
                 </div>
-                <form class="contact-form" action="https://formsubmit.co/transformation@contraco.net" method="POST">
+                <form class="contact-form" id="contact-form">
                     <!-- FormSubmit configuration -->
                     <input type="hidden" name="_subject" value="새로운 변환 컨설팅 요청">
                     <input type="hidden" name="_captcha" value="true">
@@ -1271,5 +1259,33 @@
 </script>
 <script data-goatcounter="https://contraco.goatcounter.com/count"
         async src="https://gc.zgo.at/count.js"></script>
+<script>
+(function () {
+    var form = document.getElementById('contact-form');
+    if (!form) return;
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var honey = form.querySelector('[name="_honey"]');
+        if (honey && honey.value) return;
+        var parts = [];
+        var fields = form.querySelectorAll('input[name], textarea[name], select[name]');
+        for (var i = 0; i < fields.length; i++) {
+            var f = fields[i];
+            if (f.name.charAt(0) === '_') continue;
+            if (f.type === 'submit' || f.type === 'button') continue;
+            if (!f.value) continue;
+            var label = form.querySelector('label[for="' + f.id + '"]');
+            var ph = f.getAttribute('placeholder');
+            var name = label ? label.textContent.replace('*', '').trim() : (ph && ph.length <= 30 ? ph : f.name);
+            parts.push(name + ': ' + f.value);
+        }
+        var body = parts.join('\n\n');
+        if (body.length > 1500) body = body.slice(0, 1500);
+        window.location.href = 'mailto:transformation@contraco.net'
+            + '?subject=' + encodeURIComponent('New enquiry from contraco.co.kr')
+            + '&body=' + encodeURIComponent(body);
+    });
+})();
+</script>
 </body>
 </html>

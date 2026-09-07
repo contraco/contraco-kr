@@ -11,18 +11,6 @@
     <!-- Robots Meta Tag - noindex for contact page -->
     <meta name="robots" content="noindex, follow">
     
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-868WGCC45D"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-868WGCC45D', {
-            page_title: 'contraco 연락하다 | 비즈니스 혁신을 시작하세요',
-            page_location: window.location.href
-        });
-    </script>
-    
     <!-- Complete hreflang for International SEO -->
 
 
@@ -741,7 +729,7 @@
 
                     <div class="contact-form">
                         <h3 class="form-title">상담 요청</h3>
-                        <form action="https://formsubmit.co/transformation@contraco.net" method="POST">
+                        <form id="contact-form">
                             <!-- FormSubmit configuration -->
                             <input type="hidden" name="_subject" value="새로운 변환 컨설팅 요청">
                             <input type="hidden" name="_captcha" value="true">
@@ -885,5 +873,33 @@
 </script>
 <script data-goatcounter="https://contraco.goatcounter.com/count"
         async src="https://gc.zgo.at/count.js"></script>
+<script>
+(function () {
+    var form = document.getElementById('contact-form');
+    if (!form) return;
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var honey = form.querySelector('[name="_honey"]');
+        if (honey && honey.value) return;
+        var parts = [];
+        var fields = form.querySelectorAll('input[name], textarea[name], select[name]');
+        for (var i = 0; i < fields.length; i++) {
+            var f = fields[i];
+            if (f.name.charAt(0) === '_') continue;
+            if (f.type === 'submit' || f.type === 'button') continue;
+            if (!f.value) continue;
+            var label = form.querySelector('label[for="' + f.id + '"]');
+            var ph = f.getAttribute('placeholder');
+            var name = label ? label.textContent.replace('*', '').trim() : (ph && ph.length <= 30 ? ph : f.name);
+            parts.push(name + ': ' + f.value);
+        }
+        var body = parts.join('\n\n');
+        if (body.length > 1500) body = body.slice(0, 1500);
+        window.location.href = 'mailto:transformation@contraco.net'
+            + '?subject=' + encodeURIComponent('New enquiry from contraco.co.kr')
+            + '&body=' + encodeURIComponent(body);
+    });
+})();
+</script>
 </body>
 </html>
