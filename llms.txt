@@ -46,7 +46,7 @@ contraco는 네 개의 도메인에서 발행합니다: [영어](https://contrac
 - [디지털 혁신 컨설팅](https://contraco.co.kr/)
 - [Insights contraco | 변환 전략 및 연구](https://contraco.co.kr/insights.html)
 - [AI 혁신을 통한 리더십: 변화의 인간적 측면](https://contraco.co.kr/leading-ai-transformation.html)
-- [AI 시대를 위한 조직 설계: 50개 이상의 혁신에서 얻은 교훈](https://contraco.co.kr/organizational-design-ai.html)
+- [AI 시대를 위한 조직 설계: 28년 고객 작업에서 얻은 교훈](https://contraco.co.kr/organizational-design-ai.html)
 - [프레스 및 미디어](https://contraco.co.kr/press.html)
 - [가격 심리학 | 행동경제학을 통한 매출 성장](https://contraco.co.kr/pricing-psychology.html)
 - [개인정보 보호 정책](https://contraco.co.kr/privacy-statement.html)
