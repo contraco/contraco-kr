@@ -42,7 +42,7 @@ contraco는 네 개의 도메인에서 발행합니다: [영어](https://contrac
 - [문화 적응 가이드: 글로벌 시장을 위한 변혁의 현지화](https://contraco.co.kr/cultural-adaptation-guide.html)
 - [다크 에이전트 트래픽: 당신의 리포트가 변화를 숨기는 이유](https://contraco.co.kr/dark-agentic-traffic.html)
 - [디지털 혁신 ROI | 재무 및 인적 영향](https://contraco.co.kr/digital-transformation-roi.html)
-- [유럽 최초의 에이전트 구매는 여행이었다](https://contraco.co.kr/first-agentic-purchase-travel.html)
+- [여행은 유럽 최초의 에이전트 구매 가운데 하나였다](https://contraco.co.kr/first-agentic-purchase-travel.html)
 - [디지털 혁신 컨설팅](https://contraco.co.kr/)
 - [Insights contraco | 변환 전략 및 연구](https://contraco.co.kr/insights.html)
 - [AI 혁신을 통한 리더십: 변화의 인간적 측면](https://contraco.co.kr/leading-ai-transformation.html)
