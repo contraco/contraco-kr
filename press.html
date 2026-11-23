@@ -82,6 +82,47 @@
 
     <!-- Structured Data -->
     <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "contraco",
+        "url": "https://contraco.co.kr/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://contraco.co.kr/Logo_rectangle.svg",
+            "width": 400,
+            "height": 100
+        },
+        "email": "transformation@contraco.net",
+        "telephone": "+13129400326",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "1209 10th Ln.",
+            "addressLocality": "Ava",
+            "addressRegion": "MO",
+            "postalCode": "65608",
+            "addressCountry": "US"
+        },
+        "foundingDate": "1998",
+        "founder": {
+            "@type": "Person",
+            "@id": "https://meltke.com/#person",
+            "name": "Frank Meltke",
+            "url": "https://meltke.com"
+        },
+        "areaServed": [{"@type": "Country", "name": "South Korea"}, {"@type": "Country", "name": "Global"}],
+        "sameAs": [
+            "https://www.wikidata.org/wiki/Q139681815",
+            "https://www.linkedin.com/company/contraco",
+            "https://contraco.com",
+            "https://contraco.net",
+            "https://contraco.de",
+            "https://contraco.ru"
+        ]
+    }
+    </script>
+
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
@@ -89,7 +130,7 @@
   "description": "한국 대기업과 중견기업을 위한 AI 전환 전략, 보도 자료, 전문가 기고문 및 학술 연구. Frank Meltke 및 contraco.",
   "url": "https://contraco.co.kr/press.html",
   "inLanguage": "ko",
-  "dateModified": "2026-11-20",
+  "dateModified": "2026-11-23",
   "isPartOf": {
     "@type": "WebSite",
     "@id": "https://contraco.co.kr/#website",
@@ -109,6 +150,20 @@
     "sameAs": ["https://www.wikidata.org/wiki/Q139681815"]
   },
   "hasPart": [
+    {
+      "@type": "NewsArticle",
+      "headline": "How IT Leaders Make Everyday Work More Secure",
+      "url": "https://ciogrid.com/qa/how-it-leaders-make-everyday-work-more-secure/",
+      "datePublished": "2026-11-23",
+      "inLanguage": "en",
+      "publisher": { "@type": "Organization", "name": "CIO Grid" },
+      "mentions": {
+          "@type": "Person",
+          "@id": "https://meltke.com/#person",
+          "name": "Frank Meltke",
+          "url": "https://meltke.com"
+      }
+    },
     {
       "@type": "NewsArticle",
       "headline": "Frank Meltke Of Contraco On The Top 5 Future Payment Processing Trends",
@@ -717,7 +772,7 @@
         <!-- Page Header -->
         <section class="page-header">
             <div class="container">
-                <h1 class="page-title">레조넌스 방법론<span style="font-family: var(--font-sans);">™</span>: <span style="color: var(--primary-red);">한국 기업을 위한 글로벌 AI 전략</span></h1>
+                <h1 class="page-title">레조넌스 방법론™: <span style="color: var(--primary-red);">한국 기업을 위한 글로벌 AI 전략</span></h1>
                 <p class="page-subtitle">왜 한국 AI 전환 프로젝트의 70%가 기술이 아닌 사람 때문에 실패하는가. 심리적 동기화를 통한 실질적 경쟁 우위 확보 방법.</p>
             </div>
         </section>
@@ -911,6 +966,19 @@
                 <h2 class="section-title">국제 언론의 contraco</h2>
                 <p class="section-intro">AI 혁신, IT 효율성, 변화의 인적 요소에 관한 contraco의 분석은 4개 대륙, 8개 언어의 주요 전문 매체에 게재되었습니다.</p>
                 <div class="press-grid">
+
+                    <!-- CIO Grid - Everyday Work More Secure Nov 2026 -->
+                    <div class="press-card">
+                        <p class="press-outlet">CIO Grid</p>
+                        <p class="press-date">2026년 11월 23일</p>
+                        <span class="press-tag">전문가 의견</span>
+                        <h3 class="press-title">How IT Leaders Make Everyday Work More Secure</h3>
+                        <p class="press-excerpt">안전한 방법이 안전하지 않은 방법보다 느리면 보안은 장벽이 되고, 사람들은 통하는 방법을 택한 뒤 그 사실을 말하지 않습니다. 회사가 공개 챗봇을 금지하면서 대안을 제공하지 않으면 직원들은 결국 고객 데이터를 그곳에 입력하게 되므로, 공개 도구를 차단하기 전에 승인된 AI 도구가 먼저 마련되어 있어야 합니다. 안전한 선택은 누구도 따로 고를 필요가 없는 기본값이어야 하며, 직원들이 이미 쓰고 있는 우회 방법을 책임을 묻지 않고 물어보면 공식 절차가 어디서 너무 느리거나 비어 있는지 드러납니다.</p>
+                        <a href="https://ciogrid.com/qa/how-it-leaders-make-everyday-work-more-secure/" class="press-link" target="_blank" rel="noopener">
+                            기사 보기
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
 
                     <!-- Authority Magazine - Top 5 Future Payment Processing Trends Nov 2026 -->
                     <div class="press-card">
